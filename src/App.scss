@@ -1,14 +1,42 @@
 /* Main Styles */
 
 * {
-  font-size: 62.5%;
-  margin: 0;
-  padding: 0;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
 }
 
-.container {
-  width: 100%;
-  padding-top: 6rem;
-  display: flex;
-  color: white;
+@font-face {
+	font-family: 'FiraGO-Bold';
+	src: url('./fonts/FiraGo/FiraGO-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'FiraGO-BoldItalic';
+	src: url('./fonts/FiraGo/FiraGO-BoldItalic.ttf');
+}
+
+@font-face {
+	font-family: 'FiraGO-Light';
+	src: url('./fonts/FiraGo/FiraGO-Light.ttf');
+}
+
+@font-face {
+	font-family: 'FiraGO-Medium';
+	src: url('./fonts/FiraGo/FiraGO-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'FiraGO-Regular';
+	src: url('./fonts/FiraGo/FiraGO-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'FiraGO-ExtraBold';
+	src: url('./fonts/FiraGo/FiraGO-ExtraBold.ttf');
+}
+
+@font-face {
+	font-family: 'FiraGO-MediumItalic';
+	src: url('./fonts/FiraGo/FiraGO-MediumItalic.ttf');
 }
