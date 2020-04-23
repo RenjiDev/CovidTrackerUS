@@ -22,7 +22,7 @@
     },
     {
       "id": "4",
-      "country": "United States of America",
+      "country": "USA",
       "flag": "🇺🇸"
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "id": "8",
-      "country": "South Korea",
+      "country": "S. Korea",
       "flag": "🇰🇷 "
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "id": "10",
-      "country": "United Kingdom",
+      "country": "UK",
       "flag": "🇬🇧 "
     },
     {
@@ -327,7 +327,7 @@
     },
     {
       "id": "65",
-      "country": "United Arab Emirates",
+      "country": "UAE",
       "flag": "🇦🇪 "
     },
     {
@@ -347,7 +347,7 @@
     },
     {
       "id": "69",
-      "country": "Dominican Rep.",
+      "country": "Dominican Republic",
       "flag": "🇩🇴 "
     },
     {
@@ -382,7 +382,7 @@
     },
     {
       "id": "76",
-      "country": "Bosnia and Herz.",
+      "country": "Bosnia and Herzegovina",
       "flag": "🇧🇦 "
     },
     {
@@ -397,7 +397,7 @@
     },
     {
       "id": "79",
-      "country": "Macedonia",
+      "country": "North Macedonia",
       "flag": "🇲🇰 "
     },
     {
@@ -542,7 +542,7 @@
     },
     {
       "id": "108",
-      "country": "Dem. Rep. Congo",
+      "country": "DRC",
       "flag": "🇨🇩"
     },
     {
@@ -632,7 +632,7 @@
     },
     {
       "id": "126",
-      "country": "Côte d'Ivoire",
+      "country": "Ivory Coast",
       "flag": "🇨🇮 "
     },
     {
@@ -677,7 +677,7 @@
     },
     {
       "id": "135",
-      "country": "Eq. Guinea",
+      "country": "Equatorial Guinea",
       "flag": "🇬🇶 "
     },
     {
@@ -727,12 +727,12 @@
     },
     {
       "id": "145",
-      "country": "Cape Verde",
+      "country": "Cabo Verde",
       "flag": "🇨🇻 "
     },
     {
       "id": "146",
-      "country": "Central African Rep.",
+      "country": "CAR",
       "flag": "🇨🇫 "
     },
     {
@@ -827,7 +827,7 @@
     },
     {
       "id": "165",
-      "country": "St Lucia",
+      "country": "Saint Lucia",
       "flag": "🇱🇨 "
     },
     {
@@ -887,7 +887,7 @@
     },
     {
       "id": "177",
-      "country": "St Vincent and the Grenadines",
+      "country": "St. Vincent and the Grenadines",
       "flag": "🇻🇨 "
     },
     {
@@ -932,7 +932,7 @@
     },
     {
       "id": "186",
-      "country": "Turks and Caicos Islands",
+      "country": "Turks and Caicos",
       "flag": "🇹🇨 "
     },
     {
@@ -972,7 +972,7 @@
     },
     {
       "id": "194",
-      "country": "St Kitts & Nevis",
+      "country": "Saint Kitts and Nevis",
       "flag": "🇰🇳 "
     },
     {
@@ -1007,12 +1007,12 @@
     },
     {
       "id": "201",
-      "country": "Falkland Is.",
+      "country": "Falkland Islands",
       "flag": "🇫🇰 "
     },
     {
       "id": "202",
-      "country": "W. Sahara",
+      "country": "Western Sahara",
       "flag": "🇪🇭 "
     },
     {
@@ -1027,7 +1027,7 @@
     },
     {
       "id": "205",
-      "country": "São Tomé and Príncipe",
+      "country": "Sao Tome and Principe",
       "flag": "🇸🇹 "
     }
   ]

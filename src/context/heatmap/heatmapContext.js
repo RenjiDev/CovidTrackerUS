@@ -1,5 +1,5 @@
 import { createContext } from 'react';
 
-const heatmapContext = createContext;
+const heatmapContext = createContext();
 
 export default heatmapContext;
