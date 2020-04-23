@@ -4,7 +4,12 @@ import rapidAPI from '../../config/Rapid.json';
 
 import CountryContext from './countryContext';
 import CountryReducer from './countryReducer';
-import { SET_CURRENT_COUNTRY, FILTER_COUNTRY } from '../Types';
+import {
+  SET_CURRENT_COUNTRY,
+  FILTER_COUNTRY,
+  GET_COUNTRY_DATA,
+  COUNTRY_ERROR,
+} from '../Types';
 
 const CountryState = (props) => {
   const initialState = {

@@ -6,6 +6,7 @@ import HeatmapState from './context/heatmap/HeatmapState';
 import CountryState from './context/country/CountryState';
 
 import Landing from './pages/landing/Landing';
+import News from './pages/news/News';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Fragment>
           <div className="container">
             <Landing />
+            <News />
           </div>
         </Fragment>
       </HeatmapState>
