@@ -1,0 +1,44 @@
+@import '../../styles/Colors.scss';
+@import '../../styles/Units.scss';
+
+// Summary page styles
+.summary-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2rem;
+  padding-left: 8rem;
+}
+.summary-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.summary-title {
+  margin-bottom: 2rem;
+}
+.summary-title h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'FiraGO-SemiBoldItalic';
+  color: grey;
+}
+.summary-row {
+  display: flex;
+  flex-direction: column;
+}
+.summary-row > div {
+  margin: 2rem 0;
+}
+
+.summary-row > div > p {
+  font-size: 3rem;
+  font-family: 'FiraGO-Bolder';
+}
+.summary-desc {
+  font-size: 1.75rem !important;
+  color: gray;
+}

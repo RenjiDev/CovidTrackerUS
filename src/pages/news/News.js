@@ -1,18 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import './styles.scss';
 
-import request from 'request';
-import cheerio from 'cheerio';
-import axios from 'axios';
+import NewsContext from '../../context/news/newsContext';
 
 const News = () => {
-  const getNewsArticles = async () => {
-    const html = await axios.get('https://www.renjidev.io/');
-    console.log(html.data);
-  };
-
+  const newsContext = useContext(NewsContext);
+  const { getNews } = newsContext;
   useEffect(() => {
-    getNewsArticles();
+    getNews();
+
+    //eslint-disable-next-line
   }, []);
 
   return <div className="news-container"></div>;

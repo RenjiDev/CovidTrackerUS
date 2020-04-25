@@ -19,6 +19,7 @@ const CountryState = (props) => {
     currentCountry: null,
     cases: null,
     deaths: null,
+    globalData: null,
     filtered: null,
   };
 
@@ -210,10 +211,11 @@ const CountryState = (props) => {
         countries: state.countries,
         timeUpdated: state.timeUpdated,
         currentCountry: state.currentCountry,
-        cases: null,
-        deaths: null,
-        tests: null,
-        filtered: null,
+        globalData: state.globalData,
+        cases: state.cases,
+        deaths: state.deaths,
+        tests: state.tests,
+        filtered: state.fitlered,
         getCountryData,
         setCurrentCountry,
         filterCountries,

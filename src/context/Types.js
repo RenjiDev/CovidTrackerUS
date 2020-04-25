@@ -8,3 +8,5 @@ export const COUNTRY_ERROR = 'COUNTRY_ERROR';
 export const SET_CURRENT_COUNTRY = 'SET_CURRENT_COUNTRY';
 export const FILTER_COUNTRY = 'FITLER_COUNTRY';
 export const CLEAR_FILTER = 'CLEAR_FILTER';
+
+export const GET_NEWS = 'GET_NEWS';

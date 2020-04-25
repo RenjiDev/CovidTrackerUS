@@ -17,6 +17,7 @@ export default (state, action) => {
         cases: action.payload.global.cases,
         deaths: action.payload.global.deaths,
         tests: action.payload.global.tests.total,
+        globalData: action.payload.global,
         loading: false,
       };
     case COUNTRY_ERROR: // For debugging purposes

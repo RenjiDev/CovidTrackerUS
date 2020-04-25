@@ -3,16 +3,27 @@ import React, { Fragment } from 'react';
 import './App.scss';
 
 import HeatmapState from './context/heatmap/HeatmapState';
+import CountryState from './context/country/CountryState';
+import NewsState from './context/news/NewsState';
+
 import Landing from './pages/landing/Landing';
+import Summary from './pages/summary/Summary';
+import News from './pages/news/News';
 
 const App = () => {
-	return (
-		<HeatmapState>
-			<Fragment>
-				<Landing />
-			</Fragment>
-		</HeatmapState>
-	);
+  return (
+    <CountryState>
+      <NewsState>
+        <HeatmapState>
+          <Fragment>
+            <Landing />
+            <Summary />
+            {/* <News /> */}
+          </Fragment>
+        </HeatmapState>
+      </NewsState>
+    </CountryState>
+  );
 };
 
 export default App;
