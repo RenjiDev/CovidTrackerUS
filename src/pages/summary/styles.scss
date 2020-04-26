@@ -1,44 +1,111 @@
-@import '../../styles/Colors.scss';
-@import '../../styles/Units.scss';
-
-// Summary page styles
 .summary-container {
-  display: flex;
   width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-top: 2rem;
-  padding-left: 8rem;
+  max-width: 100%;
+  overflow: none;
+  display: flex;
 }
 .summary-info {
+  flex: 7;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  padding-top: 3rem;
 }
-
+.summary-graphic {
+  flex: 3;
+  background-color: #f7f7f7;
+}
 .summary-title {
-  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
 }
-.summary-title h1 {
-  text-align: center;
-  font-size: 3rem;
-  font-family: 'FiraGO-SemiBoldItalic';
-  color: grey;
+.summary-title > h1 {
+  font-size: 4rem;
+  font-family: 'FiraGO-Medium';
+  margin-left: 1rem;
 }
 .summary-row {
   display: flex;
-  flex-direction: column;
 }
 .summary-row > div {
-  margin: 2rem 0;
+  margin: 5rem 1rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .summary-row > div > p {
-  font-size: 3rem;
-  font-family: 'FiraGO-Bolder';
+  font-size: 4rem;
+  font-family: 'FiraGO-Regular';
 }
+
 .summary-desc {
-  font-size: 1.75rem !important;
+  font-size: 1.5rem !important;
   color: gray;
+}
+
+.summary-global {
+  display: flex;
+  width: 30%;
+  justify-content: flex-end;
+}
+
+.summary-global > p {
+  font-size: 3rem;
+  font-family: 'FiraGO-regular';
+  color: gray;
+}
+
+.summary-date {
+  width: 30%;
+  text-align: right;
+  font-size: 1.5rem;
+  color: gray;
+}
+
+@media only screen and (max-width: 768px) {
+  .summary-graphic {
+    display: none;
+  }
+  .summary-info {
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .summary-row {
+    flex-direction: column;
+  }
+  .summary-row > div {
+    margin: 3rem 0;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .summary-info {
+    align-items: flex-start;
+    padding-left: 5rem;
+  }
+  .summary-title {
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+  }
+  .summary-global {
+    margin-top: 2rem;
+    justify-content: flex-start;
+  }
+  .summary-row > div {
+    align-items: flex-start;
+  }
+  .summary-date {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .summary-title {
+    margin-left: 0rem;
+  }
 }

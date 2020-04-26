@@ -14,8 +14,17 @@ const Summary = () => {
 
   return loading ? null : (
     <div className="summary-container">
-      <div className="sumamry-info">
+      <div className="summary-info">
         <div className="summary-title">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 24 24"
+            fill="#c70039"
+          >
+            <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z" />
+          </svg>
           <h1>Summary</h1>
         </div>
         <div className="summary-row1 summary-row">
@@ -57,7 +66,6 @@ const Summary = () => {
         <div className="summary-row3 summary-row">
           <div className="summary-new-cases">
             <p>
-              +
               {parseInt(globalData.cases.new).toLocaleString(
                 navigator.language,
                 {
@@ -69,7 +77,6 @@ const Summary = () => {
           </div>
           <div className="summary-new-deaths">
             <p>
-              +
               {parseInt(globalData.deaths.new).toLocaleString(
                 navigator.language,
                 {
