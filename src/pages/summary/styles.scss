@@ -1,0 +1,90 @@
+@import '../../styles/Colors.scss';
+@import '../../styles/Units.scss';
+
+.summary-root {
+	height: 100vh;
+	display: flex;
+}
+
+.summary-col-1 {
+	width: 100%;
+	background-color: #ffffff;
+	box-sizing: border-box;
+	display: flex;
+}
+
+.summary-col-2 {
+	width: 30%;
+	display: none;
+	background-color: #f7f7f7;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	.summary-col-1 {
+		padding: 25rem 50rem 20rem $page_margin_left;
+		display: flex;
+		align-items: flex-end;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.summary-col-1 {
+		width: 70%;
+		flex-direction: column;
+	}
+	.summary-col-2 {
+		width: 30%;
+		display: flex;
+		align-items: center;
+	}
+	.summary-info-grid {
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+	}
+	.summary-info-row {
+		display: flex;
+		align-items: flex-end;
+		text-align: right;
+		justify-content: flex-end;
+		margin-top: 3rem;
+	}
+
+	.summary-info-root {
+		margin-left: 2rem;
+	}
+
+	.summary-info-root h1 {
+		font-size: 3rem !important;
+	}
+	.summary-info-root h2 {
+		font-size: 2rem;
+		font-family: $font_semibold_italic;
+		color: #696969; // nice
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.summary-art {
+		height: 50rem;
+		margin-left: -40rem;
+		transform: scaleX(-1);
+	}
+	.summary-col-1 > span {
+		display: flex;
+		align-items: center;
+	}
+	.summary-col-1 > span h1 {
+		font-size: $h2_desktop;
+		margin-left: 1rem;
+		font-family: $font_semibold_italic;
+		color: #414141;
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

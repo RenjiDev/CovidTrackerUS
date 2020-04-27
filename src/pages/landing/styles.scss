@@ -8,7 +8,7 @@
 
 // Landing Page Content
 .ldg-col-1 {
-	flex: 1;
+	width: 100%;
 	background: #f7f7f7;
 	box-sizing: border-box;
 	padding: 3rem;
@@ -16,8 +16,6 @@
 
 // Aesthetic Image
 .ldg-col-2 {
-	flex: 0.3;
-	background: cornflowerblue;
 	display: none;
 	background-image: url('../../assets/landing-stock.jpg');
 	background-size: cover;
@@ -89,12 +87,13 @@
 
 	// Content
 	.ldg-col-1 {
-		flex: 0.7;
+		width: 70%;
 		padding: 15vh 7rem 15vh $page_margin_left;
 	}
 
 	// Image
 	.ldg-col-2 {
+		width: 30%;
 		display: block;
 	}
 }

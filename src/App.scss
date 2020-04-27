@@ -12,6 +12,11 @@
 }
 
 @font-face {
+	font-family: 'FiraGO-SemiBoldItalic';
+	src: url('./fonts/FiraGo/FiraGO-SemiBoldItalic.ttf');
+}
+
+@font-face {
 	font-family: 'FiraGO-BoldItalic';
 	src: url('./fonts/FiraGo/FiraGO-BoldItalic.ttf');
 }
@@ -39,4 +44,9 @@
 @font-face {
 	font-family: 'FiraGO-MediumItalic';
 	src: url('./fonts/FiraGo/FiraGO-MediumItalic.ttf');
+}
+
+h1,
+h2 {
+	font-family: 'FiraGO-Bold';
 }
