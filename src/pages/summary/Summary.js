@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import './styles.scss';
 import Info from '../../components/summary/Info';
+
+import CountryContext from '../../context/country/countryContext';
 
 const Summary = () => {
 	return (
