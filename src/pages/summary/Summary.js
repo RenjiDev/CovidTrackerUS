@@ -5,7 +5,13 @@ import Info from '../../components/summary/Info';
 import CountryContext from '../../context/country/countryContext';
 
 const Summary = () => {
-  return (
+  const countryContext = useContext(CountryContext);
+  const { loading, globalData, getCountryData } = countryContext;
+  useEffect(() => {
+    getCountryData();
+    //eslint-disable-next-line
+  }, []);
+  return loading ? null : (
     <div className="summary-root">
       <div className="summary-col-1">
         <span>
@@ -23,16 +29,34 @@ const Summary = () => {
 
         <div className="summary-info-grid">
           <div className="summary-info-row">
-            <Info title="Confirmed" amount="20,000,000" />
-            <Info title="Active" amount="20,000,000" />
+            <Info
+              title="Confirmed"
+              amount={globalData.cases.total.toLocaleString()}
+            />
+            <Info
+              title="Active"
+              amount={globalData.cases.active.toLocaleString()}
+            />
           </div>
           <div className="summary-info-row">
-            <Info title="Confirmed" amount="20,000,000" />
-            <Info title="Active" amount="20,000,000" />
+            <Info
+              title="Recovered"
+              amount={globalData.cases.recovered.toLocaleString()}
+            />
+            <Info
+              title="Deceased"
+              amount={globalData.deaths.total.toLocaleString()}
+            />
           </div>
           <div className="summary-info-row">
-            <Info title="Confirmed" amount="20,000,000" />
-            <Info title="Active" amount="20,000,000" />
+            <Info
+              title="New Cases"
+              amount={parseInt(globalData.cases.new).toLocaleString()}
+            />
+            <Info
+              title="New Deaths"
+              amount={parseInt(globalData.deaths.new).toLocaleString()}
+            />
           </div>
         </div>
 

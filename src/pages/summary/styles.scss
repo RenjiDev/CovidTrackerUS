@@ -76,6 +76,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  width: 15rem;
 }
 
 .summary-info-row {
@@ -86,12 +87,12 @@
 
 // Amount
 .summary-info-root > h1 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
 }
 
 // Title
 .summary-info-root > h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #696969; // nice
   font-family: FiraGO-SemiBoldItalic;
 }
