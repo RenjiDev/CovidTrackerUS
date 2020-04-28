@@ -3,22 +3,215 @@
 
 .heatmap-container {
 	height: 100vh;
+	max-height: 100vh;
 	width: 100%;
 	background-color: #1c1c1c;
+	display: flex;
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+.heatmap-search {
+	height: 5rem;
+	background-color: #2f2f2f;
+	border-radius: 3rem;
+	margin-bottom: 3rem;
+	display: flex;
+	align-items: center;
+	padding: 0 3rem;
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
+.heatmap-search > input:focus {
+	outline: none;
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+.heatmap-search > input {
+	width: 100%;
+	height: 99%;
+	font-size: 2rem;
+	background-color: transparent;
+	border: none;
+	color: white;
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
+.heatmap-search > input::placeholder {
+	color: #626262;
+	font-family: FiraGO-Light;
+}
+
+.heatmap-search > svg {
+	margin-right: 2rem;
+}
+
+.heatmap-states-list-container {
+	width: 40%;
+	border-left: 1px #707070 solid;
+	margin: 8rem 0;
+	margin-right: $page_margin_right;
+	padding: 4rem 5rem 5rem 10rem;
+	box-sizing: border-box;
+	max-height: auto;
+	overflow: scroll;
+	scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent; /* make scrollbar transparent on Chrome & Safari*/
+}
+
+.heatmap-map-container {
+	width: 60%;
+	padding: 10rem;
+	padding-left: $page_margin_left;
+	box-sizing: border-box;
+	margin: auto;
+}
+
+.heatmap-title-icon {
+	height: 50px;
+	width: 50px;
+}
+
+.heatmap-title-mobile {
+	display: none;
+}
+
+// Title (Heatmap)
+.heatmap-states-list-container > span > h1 {
+	font-size: 6rem;
+	color: white;
+	font-family: FiraGo-SemiBoldItalic;
+	margin-left: 10px;
+}
+
+// Subtitle (USA)
+.heatmap-states-list-container > h2 {
+	font-size: 2.5rem;
+	color: #7b7b7b;
+	font-family: FiraGo-SemiBoldItalic;
+	margin-bottom: 3rem;
+	margin-top: 1rem;
+}
+
+.heatmap-states-list-container > span {
+	display: flex;
+	align-items: center;
+}
+
+.heatmap-list-item {
+	height: 7rem;
+	border-bottom: 1px white solid;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.heatmap-list-item h1 {
+	font-size: 2rem;
+	color: white;
+	font-family: FiraGO-Regular;
+}
+
+.heatmap-list-item h2 {
+	font-size: 1.5rem;
+	color: #bababa;
+	font-family: FiraGO-Light;
+}
+
+.heatmap-list-item svg {
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+@media (max-width: 1355px) {
+	// Title (Heatmap)
+	.heatmap-states-list-container > span > h1 {
+		font-size: 4rem;
+	}
+
+	// Subtitle (USA)
+	.heatmap-states-list-container > h2 {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 1116px) {
+	.heatmap-container {
+		height: 100vh;
+		width: 100%;
+		background-color: #1c1c1c;
+		display: flex;
+		flex-direction: column;
+	}
+	.heatmap-states-list-container {
+		border: none;
+		width: 100%;
+		margin: 0;
+		margin-bottom: 3rem;
+		margin-right: $page_margin_right;
+		padding: 0 10rem 5rem;
+		box-sizing: border-box;
+		max-height: auto;
+		overflow: scroll;
+		scrollbar-width: none; /* Firefox */
+	}
+
+	// DESKTOP
+	.heatmap-states-list-container > span > h1 {
+		display: none;
+	}
+	.heatmap-states-list-container > h2 {
+		display: none;
+	}
+	.heatmap-states-list-container > span > img {
+		display: none;
+	}
+
+	// MOBILE
+	.heatmap-title-mobile > span > h1 {
+		font-size: 6rem;
+		color: white;
+		font-family: FiraGo-SemiBoldItalic;
+		margin-left: 10px;
+	}
+	.heatmap-title-mobile > h2 {
+		font-size: 2.5rem;
+		color: #7b7b7b;
+		font-family: FiraGo-SemiBoldItalic;
+		margin-bottom: 3rem;
+		margin-top: 1rem;
+	}
+	.heatmap-title-mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 10rem;
+	}
+	.heatmap-title-mobile > span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.heatmap-container {
+		height: 150vh;
+		max-height: none;
+	}
+	.heatmap-map-container {
+		padding: 2rem 0;
+	}
+}
+
+@media (max-width: 500px) {
+	.heatmap-states-list-container {
+		padding: 0 5rem 5rem;
+	}
+}
+
+@media (max-width: 425px) {
+	// MOBILE
+	.heatmap-title-mobile > span > h1 {
+		font-size: 4rem;
+	}
+	.heatmap-title-mobile > h2 {
+		font-size: 2rem;
+	}
 }

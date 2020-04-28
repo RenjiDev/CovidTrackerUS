@@ -10,6 +10,7 @@ import Landing from './pages/landing/Landing';
 import Summary from './pages/summary/Summary';
 import Heatmap from './pages/heatmap/Heatmap';
 import News from './pages/news/News';
+import AllData from './pages/all-data/AllData';
 
 const App = () => {
 	return (
@@ -18,6 +19,7 @@ const App = () => {
 				<Landing />
 				<Summary />
 				<Heatmap />
+				<AllData />
 				{/* <News /> */}
 			</Fragment>
 		</HeatmapState>

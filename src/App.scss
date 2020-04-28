@@ -6,6 +6,10 @@
 	padding: 0;
 }
 
+*:focus {
+	outline: none;
+}
+
 @font-face {
 	font-family: 'FiraGO-Bold';
 	src: url('./fonts/FiraGo/FiraGO-Bold.ttf');
