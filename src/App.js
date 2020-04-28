@@ -8,6 +8,7 @@ import NewsState from './context/news/NewsState';
 
 import Landing from './pages/landing/Landing';
 import Summary from './pages/summary/Summary';
+import Heatmap from './pages/heatmap/Heatmap';
 import News from './pages/news/News';
 
 const App = () => {
