@@ -20,7 +20,7 @@ const App = () => {
 				<Summary />
 				<Heatmap />
 				<AllData />
-				{/* <News /> */}
+        <News />
 			</Fragment>
 		</HeatmapState>
 	);
