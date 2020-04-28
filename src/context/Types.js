@@ -10,3 +10,4 @@ export const FILTER_COUNTRY = 'FITLER_COUNTRY';
 export const CLEAR_FILTER = 'CLEAR_FILTER';
 
 export const GET_NEWS = 'GET_NEWS';
+export const NEWS_ERROR = 'NEWS_ERROR';

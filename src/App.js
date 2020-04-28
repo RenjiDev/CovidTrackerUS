@@ -18,7 +18,7 @@ const App = () => {
           <Fragment>
             <Landing />
             <Summary />
-            {/* <News /> */}
+            <News />
           </Fragment>
         </HeatmapState>
       </NewsState>

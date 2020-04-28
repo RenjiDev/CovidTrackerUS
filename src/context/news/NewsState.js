@@ -2,29 +2,55 @@ import React, { useReducer } from 'react';
 
 import NewsContext from './newsContext';
 import NewsReducer from './newsReducer';
-import { GET_NEWS } from '../Types';
+import { GET_NEWS, NEWS_ERROR } from '../Types';
 
 import axios from 'axios';
-import request from 'request';
 import cheerio from 'cheerio';
 
 const NewsState = (props) => {
   const initialState = {
     loading: true,
     news: [],
+    error: null,
   };
 
   const [state, dispatch] = useReducer(NewsReducer, initialState);
 
   // Get news articles
   const getNews = async () => {
-    let newsArr = [];
-    const CNN = await axios.get('https://www.cnn.com/search?q=covid');
-    let $ = await cheerio.load(CNN.data);
-
-    const CNN_article = $('body').html();
-
-    console.log(CNN_article);
+    let payload = [];
+    try {
+      const articles = await axios.get(
+        'https://cors-anywhere-covidtrackerus.herokuapp.com/https://www.google.com/search?q=covid+news&source=lnms&tbm=nws&sa=X&ved=2ahUKEwi00dyDiIPpAhXZXc0KHUXlAlQQ_AUoAXoECAwQAw&biw=1920&bih=898'
+      );
+      const $ = await cheerio.load(articles.data);
+      $('.nChh6e').each((i, el) => {
+        const artObj = {};
+        artObj.id = i;
+        const link = $(el).find('a').attr('href');
+        artObj.link = link;
+        const headline = $(el).find('.phYMDf').text();
+        artObj.headline = headline;
+        const subTitle = $(el).find('.eYN3rb').text();
+        artObj.subTitle = subTitle;
+        const provider = $(el).find('.pDavDe').text();
+        artObj.provider = provider;
+        const providerLogo = $(el).find('.wQYexc').find('img').attr('src');
+        artObj.providerLogo = providerLogo;
+        const img = $(el).find('.KNcnob').find('g-img').find('img').attr('src');
+        artObj.img = img;
+        payload.push(artObj);
+        dispatch({
+          type: GET_NEWS,
+          payload,
+        });
+      });
+    } catch (err) {
+      dispatch({
+        type: NEWS_ERROR,
+        payload: err,
+      });
+    }
   };
 
   return (

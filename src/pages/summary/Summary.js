@@ -90,7 +90,9 @@ const Summary = () => {
         <div className="summary-global">
           <p>{globalData.country}</p>
         </div>
-        <p className="summary-date">{Date(globalData.time)}</p>
+        <p className="summary-date">
+          {new Date(globalData.time).toLocaleString()}
+        </p>
       </div>
       <div className="summary-graphic"></div>
     </div>
