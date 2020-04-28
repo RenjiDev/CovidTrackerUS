@@ -14,15 +14,19 @@ import AllData from './pages/all-data/AllData';
 
 const App = () => {
 	return (
-		<HeatmapState>
-			<Fragment>
-				<Landing />
-				<Summary />
-				<Heatmap />
-				<AllData />
-        <News />
-			</Fragment>
-		</HeatmapState>
+		<CountryState>
+			<NewsState>
+				<HeatmapState>
+					<Fragment>
+						<Landing />
+						<Summary />
+						<Heatmap />
+						<AllData />
+						{/* <News /> */}
+					</Fragment>
+				</HeatmapState>
+			</NewsState>
+		</CountryState>
 	);
 };
 
