@@ -195,6 +195,14 @@ const HeatmapState = (props) => {
             break;
         }
       });
+      states = states.filter(
+        (s) =>
+          s.state !== 'PR' &&
+          s.state !== 'AS' &&
+          s.state !== 'GU' &&
+          s.state !== 'MP' &&
+          s.state !== 'VI'
+      );
       dispatch({
         type: GET_STATE_DATA,
         payload: states,
