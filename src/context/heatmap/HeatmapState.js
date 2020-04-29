@@ -9,6 +9,8 @@ import {
   STATE_ERROR,
   SET_CURRENT_STATE,
   CLEAR_CURRENT_STATE,
+  FILTER_STATE,
+  CLEAR_FILTER,
 } from '../Types';
 
 const HeatmapState = (props) => {
@@ -22,6 +24,7 @@ const HeatmapState = (props) => {
     hospitalized: null,
     deaths: null,
     lastUpdated: null,
+    filtered: null,
     error: null,
   };
 
@@ -221,6 +224,20 @@ const HeatmapState = (props) => {
     });
   };
 
+  // Filter through states
+  const filterStates = (text) => {
+    dispatch({
+      type: FILTER_STATE,
+      payload: text,
+    });
+  };
+
+  // Clear filter
+  const clearFilter = () => {
+    dispatch({
+      type: CLEAR_FILTER,
+    });
+  };
   return (
     <HeatmapContext.Provider
       value={{
@@ -237,6 +254,8 @@ const HeatmapState = (props) => {
         getStateData,
         setCurrentState,
         clearCurrentState,
+        filterStates,
+        clearFilter,
       }}
     >
       {props.children}

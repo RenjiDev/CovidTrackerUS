@@ -3,6 +3,8 @@ import {
   STATE_ERROR,
   SET_CURRENT_STATE,
   CLEAR_CURRENT_STATE,
+  FILTER_STATE,
+  CLEAR_FILTER,
 } from '../Types';
 
 export default (state, action) => {
@@ -40,6 +42,19 @@ export default (state, action) => {
         hospitalized: null,
         deaths: null,
         lastUpdated: null,
+      };
+    case FILTER_STATE:
+      return {
+        ...state,
+        filtered: state.contacts.filter((s) => {
+          const regex = new RegExp(`^${action.payload}`, 'i');
+          return s.state.match(regex);
+        }),
+      };
+    case CLEAR_FILTER:
+      return {
+        ...state,
+        filtered: null,
       };
     default:
       return state;
