@@ -9,6 +9,7 @@ const Summary = () => {
   const { loading, globalData, getCountryData } = countryContext;
   useEffect(() => {
     getCountryData();
+
     //eslint-disable-next-line
   }, []);
   return loading ? null : (
