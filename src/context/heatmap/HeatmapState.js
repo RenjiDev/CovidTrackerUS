@@ -203,6 +203,9 @@ const HeatmapState = (props) => {
           s.state !== 'MP' &&
           s.state !== 'VI'
       );
+      states.sort((a, b) => {
+        return b.positive - a.positive;
+      });
       dispatch({
         type: GET_STATE_DATA,
         payload: states,
@@ -258,6 +261,7 @@ const HeatmapState = (props) => {
         hospitalized: state.hospitalized,
         deaths: state.deaths,
         lastUpdated: state.lastUpdated,
+        filtered: state.filtered,
         error: state.error,
         getStateData,
         setCurrentState,

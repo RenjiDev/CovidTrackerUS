@@ -46,7 +46,7 @@ export default (state, action) => {
     case FILTER_STATE:
       return {
         ...state,
-        filtered: state.contacts.filter((s) => {
+        filtered: state.states.filter((s) => {
           const regex = new RegExp(`^${action.payload}`, 'i');
           return s.state.match(regex);
         }),

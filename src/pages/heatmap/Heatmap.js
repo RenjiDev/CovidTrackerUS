@@ -8,7 +8,7 @@ import HeatmapContext from '../../context/heatmap/heatmapContext';
 
 const Heatmap = () => {
   const heatmapContext = useContext(HeatmapContext);
-  const { getStateData, loading, states } = heatmapContext;
+  const { getStateData, loading, states, filtered } = heatmapContext;
 
   useEffect(() => {
     getStateData();
@@ -41,12 +41,19 @@ const Heatmap = () => {
         <h2>United States of America</h2>
 
         <SearchBar />
-        {states.map((state) => (
-          <MapListItem
-            name={state.state}
-            total={state.positive.toLocaleString()}
-          />
-        ))}
+        {filtered
+          ? filtered.map((state) => (
+              <MapListItem
+                name={state.state}
+                total={state.positive.toLocaleString()}
+              />
+            ))
+          : states.map((state) => (
+              <MapListItem
+                name={state.state}
+                total={state.positive.toLocaleString()}
+              />
+            ))}
       </div>
     </div>
   );
