@@ -2,5 +2,205 @@
 @import '../../styles/Units.scss';
 
 .all-data-container {
-	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.all-data-col-1 {
+	width: 70%;
+	padding-left: $page_margin_left;
+	margin-top: 10rem;
+	box-sizing: border-box;
+}
+
+.all-data-col-2 {
+	width: 30%;
+	background-color: #f7f7f7;
+	position: absolute;
+}
+
+.all-data-header {
+	display: flex;
+	align-items: center;
+}
+
+.all-data-header h1 {
+	font-size: 6rem;
+	margin-left: 2rem;
+	color: #2c2c2c;
+	font-family: FiraGO-BoldItalic;
+}
+
+.case-info {
+}
+
+.case-info h1 {
+	font-size: 3.5rem;
+	font-family: FiraGO-Medium;
+}
+
+.case-info h2 {
+	font-size: 2rem;
+	font-family: FiraGO-SemiBoldItalic;
+	color: #696969; // nice
+}
+
+.all-data-summary-container {
+	width: auto;
+	margin-top: 4.5rem;
+	margin-right: 5rem;
+}
+
+.all-data-summary-container > span {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.change-location-button > h1 {
+	font-size: 2rem;
+	margin-left: 0.5rem;
+	color: #bcbcbc;
+	font-family: FiraGO-Medium;
+}
+
+.change-location-button {
+	max-width: 25rem;
+	height: 3rem;
+	border-radius: 5rem;
+	border: 1px #bcbcbc solid;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 2rem 1.5rem;
+	margin-right: 1rem;
+}
+
+.active {
+	border-color: #c70039;
+}
+
+.active > h1 {
+	color: #c70039;
+}
+
+.all-data-summary-buttons {
+	margin-top: 4.5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.all-data-summary-buttons > div {
+	display: flex;
+	margin-bottom: 1rem;
+}
+
+// TABLE
+
+.table-container {
+	overflow: scroll;
+	max-height: 30rem;
+	width: 80%;
+	margin-left: $page_margin_left;
+	margin-bottom: 5rem;
+}
+
+table {
+	font-family: FiraGO-Regular;
+	margin-top: 5rem;
+	border-spacing: 0;
+}
+
+th {
+	font-size: 2rem;
+	padding: 1.5rem 19rem 1.5rem 2rem;
+	border-bottom: 1px black solid;
+}
+
+td {
+	font-size: 1.5rem;
+	padding: 1.5rem 2rem;
+	border-bottom: 1px rgb(184, 184, 184) solid;
+}
+
+@media (max-width: 1080px) {
+	.case-info h1 {
+		font-size: 3rem;
+	}
+
+	.case-info h2 {
+		font-size: 1.5rem;
+	}
+
+	.change-location-button h1 {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+}
+
+@media (max-width: 890px) {
+	.case-info h1 {
+		font-size: 2.5rem;
+	}
+
+	.case-info h2 {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 750px) {
+	.all-data-summary-container > span {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.case-info {
+		margin-bottom: 2rem;
+	}
+
+	.case-info h1 {
+		font-size: 3.5rem;
+	}
+
+	.case-info h2 {
+		font-size: 2rem;
+	}
+
+	.all-data-col-1 {
+		width: 100%;
+		padding-left: $page_margin_left;
+		margin-top: 10rem;
+		box-sizing: border-box;
+	}
+}
+
+@media (max-width: 480px) {
+	.all-data-summary-buttons {
+		margin-top: 2.5rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.all-data-summary-buttons > div {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 0;
+	}
+
+	.change-location-button {
+		max-width: 100%;
+		margin-bottom: 1rem;
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 420px) {
+	.all-data-header h1 {
+		font-size: 4rem;
+	}
+
+	.table-container {
+		max-height: 60rem;
+	}
 }
