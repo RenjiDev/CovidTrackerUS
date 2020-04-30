@@ -1,5 +1,7 @@
 import React, { useReducer } from 'react';
 import axios from 'axios';
+import cheerio from 'cheerio';
+
 import rapidAPI from '../../config/Rapid.json';
 
 import CountryContext from './countryContext';
@@ -21,6 +23,7 @@ const CountryState = (props) => {
     deaths: null,
     globalData: null,
     filtered: null,
+    chartData: null,
   };
 
   const [state, dispatch] = useReducer(CountryReducer, initialState);
@@ -204,6 +207,7 @@ const CountryState = (props) => {
       payload: { arr, text },
     });
   };
+
   return (
     <CountryContext.Provider
       value={{
