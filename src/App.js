@@ -11,6 +11,7 @@ import Summary from './pages/summary/Summary';
 import Heatmap from './pages/heatmap/Heatmap';
 import News from './pages/news/News';
 import AllData from './pages/all-data/AllData';
+import Sources from './pages/sources/Sources';
 
 const App = () => {
 	return (
@@ -23,6 +24,7 @@ const App = () => {
 						<Heatmap />
 						<AllData />
 						<News />
+						<Sources />
 					</Fragment>
 				</HeatmapState>
 			</NewsState>

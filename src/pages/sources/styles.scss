@@ -1,0 +1,106 @@
+@import '../../styles/Colors.scss';
+@import '../../styles/Units.scss';
+
+.sources-container {
+	min-height: 50vh;
+	box-sizing: border-box;
+	padding-top: 10rem;
+	padding-left: $page_margin_left;
+	padding-right: $page_margin_right;
+	padding-bottom: 10rem;
+}
+
+.source-content-mobile {
+	display: none;
+}
+
+.source-content-desktop {
+	display: flex;
+	width: 70%;
+}
+
+.sources-container > span {
+	display: flex;
+	align-items: center;
+}
+
+.sources-container > span h1 {
+	margin-left: 1.5rem;
+	font-size: 6rem;
+	color: #2c2c2c;
+}
+
+.sources-content {
+	margin-top: 4rem;
+}
+
+.source-item {
+	width: 100%;
+	min-height: 10rem;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px #707070 solid;
+	box-sizing: border-box;
+	padding: 0 2rem;
+}
+
+.source-title {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.source-location-title {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	justify-content: center;
+}
+
+.source-link-icon {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: flex-end;
+	box-sizing: border-box;
+}
+
+.source-item h1 {
+	font-size: 3rem;
+	font-family: FiraGO-Regular;
+	color: black;
+}
+
+.source-location-title h2 {
+	font-size: 3rem;
+	font-family: FiraGO-Light;
+	color: #1d1d1d;
+}
+
+@media (max-width: 900px) {
+	.source-content-mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.source-content-desktop {
+		display: none;
+	}
+	.sources-container > span {
+		justify-content: center;
+	}
+	.sources-container > span h1 {
+		font-size: 4rem;
+	}
+}
+
+@media (max-width: 425px) {
+	.source-item h1 {
+		font-size: 2rem;
+	}
+
+	.source-location-title h2 {
+		font-size: 2rem;
+	}
+}
