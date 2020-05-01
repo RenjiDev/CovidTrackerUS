@@ -1,86 +1,90 @@
 /* Main Styles */
 
 * {
-	font-size: 62.5%;
-	margin: 0;
-	padding: 0;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
 }
 
 *:focus {
-	outline: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 @font-face {
-	font-family: 'FiraGO-Bold';
-	src: url('./fonts/FiraGo/FiraGO-Bold.ttf');
+  font-family: 'FiraGO-Bold';
+  src: url('./fonts/FiraGo/FiraGO-Bold.ttf');
 }
 
 @font-face {
-	font-family: 'FiraGO-SemiBoldItalic';
-	src: url('./fonts/FiraGo/FiraGO-SemiBoldItalic.ttf');
+  font-family: 'FiraGO-SemiBoldItalic';
+  src: url('./fonts/FiraGo/FiraGO-SemiBoldItalic.ttf');
 }
 
 @font-face {
-	font-family: 'FiraGO-BoldItalic';
-	src: url('./fonts/FiraGo/FiraGO-BoldItalic.ttf');
+  font-family: 'FiraGO-BoldItalic';
+  src: url('./fonts/FiraGo/FiraGO-BoldItalic.ttf');
 }
 
 @font-face {
-	font-family: 'FiraGO-Light';
-	src: url('./fonts/FiraGo/FiraGO-Light.ttf');
+  font-family: 'FiraGO-Light';
+  src: url('./fonts/FiraGo/FiraGO-Light.ttf');
 }
 
 @font-face {
-	font-family: 'FiraGO-Medium';
-	src: url('./fonts/FiraGo/FiraGO-Medium.ttf');
+  font-family: 'FiraGO-Medium';
+  src: url('./fonts/FiraGo/FiraGO-Medium.ttf');
 }
 
 @font-face {
-	font-family: 'FiraGO-Regular';
-	src: url('./fonts/FiraGo/FiraGO-Regular.ttf');
+  font-family: 'FiraGO-Regular';
+  src: url('./fonts/FiraGo/FiraGO-Regular.ttf');
 }
 
 @font-face {
-	font-family: 'FiraGO-ExtraBold';
-	src: url('./fonts/FiraGo/FiraGO-ExtraBold.ttf');
+  font-family: 'FiraGO-ExtraBold';
+  src: url('./fonts/FiraGo/FiraGO-ExtraBold.ttf');
 }
 
 @font-face {
-	font-family: 'FiraGO-MediumItalic';
-	src: url('./fonts/FiraGo/FiraGO-MediumItalic.ttf');
+  font-family: 'FiraGO-MediumItalic';
+  src: url('./fonts/FiraGo/FiraGO-MediumItalic.ttf');
 }
 
 @font-face {
-	font-family: 'OpenSans-Italic';
-	src: url('./fonts/OpenSans/OpenSans-Italic.ttf');
+  font-family: 'OpenSans-Italic';
+  src: url('./fonts/OpenSans/OpenSans-Italic.ttf');
 }
 
 @font-face {
-	font-family: 'OpenSans-Light';
-	src: url('./fonts/OpenSans/OpenSans-Light.ttf');
+  font-family: 'OpenSans-Light';
+  src: url('./fonts/OpenSans/OpenSans-Light.ttf');
 }
 
 @font-face {
-	font-family: 'OpenSans-LightItalic';
-	src: url('./fonts/OpenSans/OpenSans-LightItalic.ttf');
+  font-family: 'OpenSans-LightItalic';
+  src: url('./fonts/OpenSans/OpenSans-LightItalic.ttf');
 }
 
 @font-face {
-	font-family: 'OpenSans-Regular';
-	src: url('./fonts/OpenSans/OpenSans-Regular.ttf');
+  font-family: 'OpenSans-Regular';
+  src: url('./fonts/OpenSans/OpenSans-Regular.ttf');
 }
 
 @font-face {
-	font-family: 'OpenSans-SemiBoldItalic';
-	src: url('./fonts/OpenSans/OpenSans-SemiBoldItalic.ttf');
+  font-family: 'OpenSans-SemiBoldItalic';
+  src: url('./fonts/OpenSans/OpenSans-SemiBoldItalic.ttf');
 }
 
 @font-face {
-	font-family: 'OpenSans-SemiBold';
-	src: url('./fonts/OpenSans/OpenSans-SemiBold.ttf');
+  font-family: 'OpenSans-SemiBold';
+  src: url('./fonts/OpenSans/OpenSans-SemiBold.ttf');
 }
 
 h1,
 h2 {
-	font-family: 'FiraGO-Bold';
+  font-family: 'FiraGO-Bold';
 }

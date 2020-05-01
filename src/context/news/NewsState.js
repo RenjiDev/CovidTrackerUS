@@ -39,11 +39,14 @@ const NewsState = (props) => {
         artObj.providerLogo = providerLogo;
         const img = $(el).find('.KNcnob').find('g-img').find('img').attr('src');
         artObj.img = img;
+        const date = $(el).find('.eNg7of').text();
+        artObj.date = date;
         payload.push(artObj);
-        dispatch({
-          type: GET_NEWS,
-          payload,
-        });
+      });
+      payload = payload.filter((p) => p.headline);
+      dispatch({
+        type: GET_NEWS,
+        payload,
       });
     } catch (err) {
       dispatch({
