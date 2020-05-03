@@ -1,6 +1,5 @@
 import React, { useReducer } from 'react';
 import axios from 'axios';
-import cheerio from 'cheerio';
 
 import rapidAPI from '../../config/Rapid.json';
 
@@ -41,18 +40,30 @@ const CountryState = (props) => {
         { headers: headers }
       );
       const countries = res.data.response;
-
+      countries.sort((a, b) => {
+        return b.cases.total - a.cases.total;
+      });
       let globalArr = countries.filter((c) => c.country === 'All');
       let global = globalArr[0];
       global.country = 'Global';
-      // Add global object to array of countries
-      countries.unshift(global);
 
       // Normalize goofy country names
       countries.forEach((c) => {
         switch (c.country) {
+          case 'USA':
+            c.country = 'United States of America';
+            break;
+          case 'UAE':
+            c.country = 'United Arab Emirates';
+            break;
+          case 'UK':
+            c.country = 'United Kingdom';
+            break;
+          case 'CAR':
+            c.country = 'Central African Republic';
+            break;
           case 'S-Korea':
-            c.country = 'S. Korea';
+            c.country = 'South Korea';
             break;
           case 'Saudi-Arabia':
             c.country = 'Saudi Arabia';
@@ -166,7 +177,7 @@ const CountryState = (props) => {
             c.country = 'Western Sahara';
             break;
           case 'South-Sudan':
-            c.country = 'S. Sudan';
+            c.country = 'South Sudan';
             break;
           case 'Saint-Pierre-Miquelon':
             c.country = 'St Pierre and Miquelon';
