@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './styles.scss';
 
 import Table from '../../components/all-data/Table';
@@ -10,7 +10,8 @@ import CountryContext from '../../context/country/countryContext';
 const AllData = () => {
   const countryContext = useContext(CountryContext);
   const { loading, getCountryData, cases, deaths } = countryContext;
-  const buttons_1 = [
+
+  const [buttons_1, setButtons_1] = useState([
     {
       iconActive: (
         <svg
@@ -49,14 +50,15 @@ const AllData = () => {
       title: 'South America',
       active: false,
     },
+  ]);
+
+  const [buttons_2, setButtons_2] = useState([
     {
       iconActive: null,
       iconInactive: null,
       title: 'Asia',
       active: false,
     },
-  ];
-  const buttons_2 = [
     {
       iconActive: null,
       iconInactive: null,
@@ -69,13 +71,52 @@ const AllData = () => {
       title: 'Africa',
       active: false,
     },
-    {
-      iconActive: null,
-      iconInactive: null,
-      title: 'Antarctica',
-      active: false,
-    },
-  ];
+  ]);
+
+  const makeButtonsFalse = () => {
+    buttons_1.forEach((b) => {
+      b.active = false;
+    });
+    buttons_2.forEach((b) => {
+      b.active = false;
+    });
+  };
+
+  const onClick = (title) => {
+    makeButtonsFalse();
+
+    buttons_1.forEach((b) => {
+      switch (title) {
+        case 'Global':
+          b.active = true;
+          break;
+        case 'North America':
+          b.active = true;
+          break;
+        case 'South America':
+          b.active = true;
+          break;
+        default:
+          break;
+      }
+    });
+
+    buttons_2.forEach((b) => {
+      switch (title) {
+        case 'Asia':
+          b.active = true;
+          break;
+        case 'Europe':
+          b.active = true;
+          break;
+        case 'Africa':
+          b.active = true;
+          break;
+        default:
+          break;
+      }
+    });
+  };
 
   useEffect(() => {
     getCountryData();
@@ -120,22 +161,26 @@ const AllData = () => {
           <div className="all-data-summary-buttons">
             <div>
               {buttons_1.map((value) => (
-                <ChangeLocationButton
-                  title={value.title}
-                  iconActive={value.iconActive}
-                  iconInactive={value.iconInactive}
-                  active={value.active}
-                />
+                <div onClick={() => onClick(value.title)}>
+                  <ChangeLocationButton
+                    title={value.title}
+                    iconActive={value.iconActive}
+                    iconInactive={value.iconInactive}
+                    active={value.active}
+                  />
+                </div>
               ))}
             </div>
             <div>
               {buttons_2.map((value) => (
-                <ChangeLocationButton
-                  title={value.title}
-                  iconActive={value.iconActive}
-                  iconInactive={value.iconInactive}
-                  active={value.active}
-                />
+                <div onClick={() => onClick(value.title)}>
+                  <ChangeLocationButton
+                    title={value.title}
+                    iconActive={value.iconActive}
+                    iconInactive={value.iconInactive}
+                    active={value.active}
+                  />
+                </div>
               ))}
             </div>
           </div>
