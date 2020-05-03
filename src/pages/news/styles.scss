@@ -2,293 +2,111 @@
 @import '../../styles/Units.scss';
 
 .news-root {
-  display: flex;
-  width: 100%;
-  height: 100vh;
+	display: flex;
+	width: 100%;
+	background-color: #2b2b2b;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 16rem 0;
 }
 
 .news-art {
-  height: 60rem;
-  margin-left: -45rem;
+	width: 30rem;
+	height: 30rem;
+	margin-left: 5rem;
 }
 
-.news-last-updated > span {
-  display: flex;
-  margin-top: 4rem;
-  align-items: center;
-  justify-content: flex-end;
+// Title Container and Text
+.news-content > span {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 
-.news-last-updated > h2 {
-  font-size: 1.5rem;
-  color: #808080;
-  font-family: FiraGO-Light;
-}
-
-.news-last-updated > span > h1 {
-  font-size: 2.5rem;
-  color: #808080;
-  margin-left: 0.5rem;
-}
-
-.news-col-1 {
-  width: 70%;
-  background-color: #2b2b2b;
-  box-sizing: border-box;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding-top: 30rem;
-  padding-bottom: 20rem;
-  padding-right: 50rem;
-  flex-direction: column;
-}
-
-// news Title
-.news-col-1 > span {
-  display: flex;
-  align-items: center;
-}
-
-.news-col-1 > span > h1 {
-  font-size: 6rem;
-  font-family: FiraGO-SemiBoldItalic;
-  color: #ffffff;
-  margin-left: 1rem;
-}
-
-.news-col-2 {
-  width: 30%;
-  background-color: #1c1c1c;
-  display: flex;
-  align-items: center;
-}
-
-.news-info-grid {
-  width: 70%;
-  margin-top: 4rem;
-  max-height: 80rem;
-  overflow: scroll;
-}
-
-.news-info-root {
-  margin-left: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 15rem;
-}
-
-.news-info-row {
-  display: flex;
-  flex-direction: row;
-  margin-top: 3rem;
-}
-
-// Amount
-.news-info-root > h1 {
-  font-size: 3.5rem;
-}
-
-// Title
-.news-info-root > h2 {
-  font-size: 2.5rem;
-  color: #696969; // nice
-  font-family: FiraGO-SemiBoldItalic;
+.news-content > span h1 {
+	font-size: 6rem;
+	margin-left: 2rem;
+	color: white;
 }
 
 .article-root {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 1rem;
-  border-bottom: 1px #707070 solid;
-  min-height: 13rem;
+	text-decoration: none;
+}
+
+.news-info-grid {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	text-align: right;
+	height: 40rem;
+	width: 60rem;
+	margin-top: 2rem;
+	overflow: scroll;
 }
 
 .article-info {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  text-align: right;
-  flex-direction: column;
-  background-origin: border-box;
-  padding-left: 10px;
+	min-height: 10rem;
 }
 
 .article-info > h1 {
-  font-size: 2.5rem;
-  font-family: OpenSans-SemiBold;
-  color: #ffffff;
+	color: #a8a8a8;
+	font-family: OpenSans-SemiBold;
+	font-size: 1.5rem;
 }
 
 .article-info > h2 {
-  font-size: 2rem;
-  font-family: OpenSans-Regular;
-  color: #a8a8a8;
+	color: #a8a8a8;
+	font-size: 1.5rem;
+	font-family: OpenSans-Light;
 }
 
-@media (max-width: 1892px) {
-  .news-art {
-    height: 40rem;
-    margin-left: -25rem;
-  }
-  // Amount
-  .news-info-root > h1 {
-    font-size: 4rem;
-  }
+@media (max-width: 1130px) {
+	// Title Container and Text
+	.news-content > span h1 {
+		font-size: 4rem;
+	}
 
-  // Title
-  .news-info-root > h2 {
-    font-size: 2.5rem;
-  }
-
-  .news-col-1 {
-    padding-right: 35rem;
-  }
+	.news-info-grid {
+		height: 40rem;
+		width: 40rem;
+	}
 }
 
-@media (max-width: 1400px) {
-  .news-art {
-    height: 30rem;
-    margin-left: -20rem;
-  }
-  // Amount
-  .news-info-root > h1 {
-    font-size: 3rem;
-  }
+@media (max-width: 830px) {
+	.news-art {
+		display: none;
+	}
 
-  // Title
-  .news-info-root > h2 {
-    font-size: 2rem;
-  }
+	.news-content > span h1 {
+		font-size: 3.5rem;
+	}
 
-  .news-col-1 {
-    padding-right: 25rem;
-  }
-}
+	.news-content > span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-@media (max-width: 1032px) {
-  .news-col-1 > span > h1 {
-    font-size: 4rem;
-  }
-  .news-art {
-    height: 25rem;
-    margin-left: -15rem;
-  }
-  // Amount
-  .news-info-root > h1 {
-    font-size: 2.5rem;
-  }
+	.news-info-grid {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: center;
+		height: 40rem;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0 4rem;
+		margin-top: 3rem;
+		overflow: scroll;
+	}
 
-  // Title
-  .news-info-root > h2 {
-    font-size: 2rem;
-  }
+	.article-root {
+		margin: 2rem 0;
+	}
 
-  .news-col-1 {
-    padding-right: 20rem;
-  }
-
-  .article-info > h1 {
-    font-size: 2rem;
-  }
-
-  .article-info > h2 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 860px) {
-  .news-col-1 > span > h1 {
-    font-size: 4rem;
-  }
-  .news-art {
-    height: 20rem;
-    margin-left: -10rem;
-  }
-  // Amount
-  .news-info-root > h1 {
-    font-size: 2rem;
-  }
-
-  // Title
-  .news-info-root > h2 {
-    font-size: 1.5rem;
-  }
-
-  .news-col-1 {
-    padding-right: 20rem;
-  }
-
-  .news-last-updated > h2 {
-    font-size: 1rem;
-  }
-
-  .news-last-updated > span > h1 {
-    font-size: 2rem;
-  }
-}
-
-// MOBILE
-@media (max-width: 708px) {
-  .news-col-1 > span > h1 {
-    font-size: 4rem;
-  }
-  .news-col-2 {
-    display: none;
-  }
-
-  // Amount
-  .news-info-root {
-    align-items: center;
-    margin-left: 0;
-    margin-top: 4rem;
-  }
-
-  .news-info-root > h1 {
-    font-size: 3.5rem;
-  }
-
-  // Title
-  .news-info-root > h2 {
-    font-size: 2.5rem;
-  }
-
-  .news-col-1 {
-    padding: 10rem 0;
-    width: 100%;
-    align-items: center;
-  }
-
-  .news-info-grid {
-    width: 50%;
-  }
-  .news-info-row {
-    flex-direction: column;
-    margin-top: 0;
-  }
-
-  .news-last-updated {
-    margin-top: 3rem;
-  }
-  .news-last-updated > span {
-    justify-content: center;
-  }
-  .news-last-updated > h2 {
-    font-size: 2rem;
-  }
-  .news-last-updated > span > h1 {
-    font-size: 3rem;
-  }
-
-  .news-info-grid {
-    width: 80%;
-    margin-top: 4rem;
-    max-height: unset;
-    overflow: scroll;
-  }
+	.article-root,
+	.article-info {
+		width: 100%;
+	}
 }
