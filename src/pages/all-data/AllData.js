@@ -75,7 +75,7 @@ const AllData = () => {
 
   const makeButtonsFalse = () => {
     buttons_1.forEach((b) => {
-      b.active = false;
+      setButtons_1();
     });
     buttons_2.forEach((b) => {
       b.active = false;
