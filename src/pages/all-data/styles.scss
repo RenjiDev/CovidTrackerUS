@@ -79,6 +79,10 @@
 	margin-right: 1rem;
 }
 
+.change-location-button:hover {
+	cursor: pointer;
+}
+
 .active {
 	border-color: #c70039;
 }
@@ -144,7 +148,6 @@
 
 table {
 	font-family: FiraGO-Regular;
-	margin-top: 5rem;
 	border-spacing: 0;
 }
 
@@ -160,7 +163,7 @@ td {
 	border-bottom: 1px rgb(184, 184, 184) solid;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1165px) {
 	.case-info h1 {
 		font-size: 3rem;
 	}
@@ -175,17 +178,7 @@ td {
 	}
 }
 
-@media (max-width: 890px) {
-	.case-info h1 {
-		font-size: 2.5rem;
-	}
-
-	.case-info h2 {
-		font-size: 1rem;
-	}
-}
-
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
 	.all-data-summary-container > span {
 		width: 100%;
 		display: flex;
@@ -236,9 +229,6 @@ td {
 		justify-content: center;
 		padding-right: 4rem;
 	}
-	.all-data-summary-container {
-		margin-right: $page_margin_left;
-	}
 	.all-data-summary-container > span {
 		align-items: center;
 		text-align: center;
@@ -252,11 +242,6 @@ td {
 
 	.case-info h2 {
 		font-size: 2.5rem;
-	}
-
-	.all-data-col-1 > p {
-		text-align: center;
-		padding-right: 4rem;
 	}
 }
 

@@ -9,7 +9,13 @@ import CountryContext from '../../context/country/countryContext';
 
 const AllData = () => {
 	const countryContext = useContext(CountryContext);
-	const { loading, getCountryData, cases, deaths } = countryContext;
+	const {
+		loading,
+		getCountryData,
+		cases,
+		deaths,
+		setCurrentCountry,
+	} = countryContext;
 
 	const [buttons_1, setButtons_1] = useState([
 		{
@@ -50,15 +56,15 @@ const AllData = () => {
 			title: 'South America',
 			active: false,
 		},
-	]);
-
-	const [buttons_2, setButtons_2] = useState([
 		{
 			iconActive: null,
 			iconInactive: null,
 			title: 'Asia',
 			active: false,
 		},
+	]);
+
+	const [buttons_2, setButtons_2] = useState([
 		{
 			iconActive: null,
 			iconInactive: null,
@@ -71,51 +77,49 @@ const AllData = () => {
 			title: 'Africa',
 			active: false,
 		},
+		{
+			iconActive: null,
+			iconInactive: null,
+			title: 'Oceania',
+			active: false,
+		},
 	]);
 
 	const makeButtonsFalse = () => {
-		buttons_1.forEach((b) => {
-			setButtons_1();
-		});
-		buttons_2.forEach((b) => {
+		let button1_tmp = [...buttons_1];
+		button1_tmp.forEach((b) => {
 			b.active = false;
 		});
+		setButtons_1(button1_tmp);
+
+		let button2_tmp = [...buttons_2];
+		button2_tmp.forEach((b) => {
+			b.active = false;
+		});
+		setButtons_2(button2_tmp);
 	};
 
 	const onClick = (title) => {
 		makeButtonsFalse();
 
-		buttons_1.forEach((b) => {
-			switch (title) {
-				case 'Global':
-					b.active = true;
-					break;
-				case 'North America':
-					b.active = true;
-					break;
-				case 'South America':
-					b.active = true;
-					break;
-				default:
-					break;
-			}
-		});
+		if (
+			title === 'Global' ||
+			title === 'North America' ||
+			title === 'South America' ||
+			title === 'Asia'
+		) {
+			let button1_tmp = [...buttons_1];
+			let i = button1_tmp.map((b) => b.title).indexOf(title);
+			button1_tmp[i].active = true;
+			setButtons_1(button1_tmp);
+		} else {
+			let button2_tmp = [...buttons_2];
+			let i = button2_tmp.map((b) => b.title).indexOf(title);
+			button2_tmp[i].active = true;
+			setButtons_2(button2_tmp);
+		}
 
-		buttons_2.forEach((b) => {
-			switch (title) {
-				case 'Asia':
-					b.active = true;
-					break;
-				case 'Europe':
-					b.active = true;
-					break;
-				case 'Africa':
-					b.active = true;
-					break;
-				default:
-					break;
-			}
-		});
+		setCurrentCountry(title);
 	};
 
 	useEffect(() => {
