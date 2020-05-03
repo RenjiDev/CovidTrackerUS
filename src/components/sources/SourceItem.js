@@ -2,7 +2,7 @@ import React from 'react';
 
 const SourceItem = ({ title, sourceTitle, url }) => {
 	return (
-		<div className='source-item'>
+		<a className='source-item' href={url}>
 			<div className='source-content-mobile'>
 				<span className='source-title'>
 					<h1>{title}</h1>
@@ -33,7 +33,7 @@ const SourceItem = ({ title, sourceTitle, url }) => {
 					<path d='M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z' />
 				</svg>
 			</span>
-		</div>
+		</a>
 	);
 };
 

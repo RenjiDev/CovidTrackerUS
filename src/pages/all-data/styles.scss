@@ -31,7 +31,10 @@
 	font-family: FiraGO-BoldItalic;
 }
 
-.case-info {
+.all-data-col-1 > p {
+	font-size: 1.2rem;
+	font-family: OpenSans-Light;
+	margin-top: 0.5rem;
 }
 
 .case-info h1 {
@@ -95,11 +98,45 @@
 	margin-bottom: 1rem;
 }
 
-// TABLE
+.table-container {
+	display: flex;
+	flex-direction: column;
+}
 
+.table-root-with-input {
+	display: flex;
+	flex-direction: column;
+	margin-top: 5rem;
+}
+
+.table-input-container {
+	max-width: 30rem;
+	height: 3rem;
+	margin-left: $page_margin_left;
+	margin-right: $page_margin_left;
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px #b9b9b9 solid;
+}
+
+.table-input-container > input {
+	flex: 1;
+	height: 100%;
+	border: none;
+	font-size: 1.5rem;
+	padding: 0 1rem;
+	font-family: OpenSans-Regular;
+}
+
+.table-input-container > input::placeholder {
+	font-family: OpenSans-Regular;
+}
+
+// TABLE
 .table-container {
 	overflow: scroll;
-	max-height: 30rem;
+	max-height: 100rem;
 	width: 80%;
 	margin-left: $page_margin_left;
 	margin-bottom: 10rem;
@@ -199,6 +236,9 @@ td {
 		justify-content: center;
 		padding-right: 4rem;
 	}
+	.all-data-summary-container {
+		margin-right: $page_margin_left;
+	}
 	.all-data-summary-container > span {
 		align-items: center;
 		text-align: center;
@@ -212,6 +252,11 @@ td {
 
 	.case-info h2 {
 		font-size: 2.5rem;
+	}
+
+	.all-data-col-1 > p {
+		text-align: center;
+		padding-right: 4rem;
 	}
 }
 
