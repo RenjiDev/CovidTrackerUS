@@ -105,6 +105,24 @@
 .table-container {
 	display: flex;
 	flex-direction: column;
+	overflow: scroll;
+	max-height: 100rem;
+	width: 80%;
+	margin-left: $page_margin_left;
+	margin-bottom: 10rem;
+	-ms-overflow-style: initial; /* Internet Explorer 10+ */
+	scrollbar-width: 3px; /* Firefox */
+}
+
+.table-container::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 5px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 .table-root-with-input {
@@ -135,15 +153,6 @@
 
 .table-input-container > input::placeholder {
 	font-family: OpenSans-Regular;
-}
-
-// TABLE
-.table-container {
-	overflow: scroll;
-	max-height: 100rem;
-	width: 80%;
-	margin-left: $page_margin_left;
-	margin-bottom: 10rem;
 }
 
 table {

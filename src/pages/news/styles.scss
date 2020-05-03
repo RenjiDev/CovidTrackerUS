@@ -43,6 +43,12 @@
 	width: 60rem;
 	margin-top: 2rem;
 	overflow: scroll;
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
+}
+
+.news-info-grid::-webkit-scrollbar {
+	display: none; /* Safari and Chrome */
 }
 
 .article-info {
