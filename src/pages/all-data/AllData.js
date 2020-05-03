@@ -4,6 +4,8 @@ import './styles.scss';
 import Table from '../../components/all-data/Table';
 import CaseInfo from '../../components/all-data/CaseInfo';
 import ChangeLocationButton from '../../components/all-data/ChangeLocationButton';
+import TotalCases from '../../components/all-data/charts/TotalCases';
+import TotalDeaths from '../../components/all-data/charts/TotalDeaths';
 
 import CountryContext from '../../context/country/countryContext';
 
@@ -206,6 +208,11 @@ const AllData = () => {
 					<input placeholder='Search' />
 				</div>
 				<Table />
+			</div>
+
+			<div className='charts-container'>
+				<TotalCases />
+				<TotalDeaths />
 			</div>
 		</div>
 	);
