@@ -36,7 +36,7 @@ const NewsState = (props) => {
 					artObj.headline = headline;
 					// const subTitle = $(el).find('.eYN3rb').text();
 					// artObj.subTitle = subTitle;
-					const provider = $(el).find('.rISBZc').attr('alt');
+					const provider = $(el).find('.qjdEw').find('img').attr('alt');
 					artObj.provider = provider;
 					// const providerLogo = $(el).find('.rISBZc').attr('alt');
 					// artObj.providerLogo = providerLogo;
