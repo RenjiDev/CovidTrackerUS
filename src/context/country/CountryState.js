@@ -10,6 +10,7 @@ import {
   FILTER_COUNTRY,
   GET_COUNTRY_DATA,
   COUNTRY_ERROR,
+  CLEAR_FILTER,
 } from '../Types';
 
 const CountryState = (props) => {
@@ -46,9 +47,10 @@ const CountryState = (props) => {
       let globalArr = countries.filter((c) => c.country === 'All');
       let global = globalArr[0];
       global.country = 'Global';
-
+      let i = 0;
       // Normalize goofy country names
       countries.forEach((c) => {
+        c.id = i++;
         switch (c.country) {
           case 'USA':
             c.country = 'United States of America';
@@ -217,10 +219,16 @@ const CountryState = (props) => {
     });
   };
 
-  const filterCountries = (text, arr) => {
+  const filterCountries = (text) => {
     dispatch({
       type: FILTER_COUNTRY,
-      payload: { arr, text },
+      payload: text,
+    });
+  };
+
+  const clearFilter = () => {
+    dispatch({
+      type: CLEAR_FILTER,
     });
   };
 
@@ -235,10 +243,11 @@ const CountryState = (props) => {
         cases: state.cases,
         deaths: state.deaths,
         tests: state.tests,
-        filtered: state.fitlered,
+        filtered: state.filtered,
         getCountryData,
         setCurrentCountry,
         filterCountries,
+        clearFilter,
       }}
     >
       {props.children}

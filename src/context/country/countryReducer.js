@@ -37,8 +37,8 @@ export default (state, action) => {
     case FILTER_COUNTRY:
       return {
         ...state,
-        filtered: action.payload.arr.filter((c) => {
-          const regex = new RegExp(`^${action.payload.text}`, 'i');
+        filtered: state.countries.filter((c) => {
+          const regex = new RegExp(`^${action.payload}`, 'i');
           return c.country.match(regex);
         }),
       };

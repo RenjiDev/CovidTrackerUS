@@ -5,7 +5,7 @@ import CountryContext from '../../context/country/countryContext';
 
 const Table = () => {
   const countryContext = useContext(CountryContext);
-  const { countries } = countryContext;
+  const { countries, filtered } = countryContext;
   const tableData = [];
   countries.forEach((country) => {
     if (
@@ -21,10 +21,10 @@ const Table = () => {
         col1: country.country,
         col2: country.cases.total.toLocaleString(),
         col3: country.cases.new
-          ? parseInt(country.cases.new).toLocaleString()
+          ? `+${parseInt(country.cases.new).toLocaleString()}`
           : '',
         col4: country.deaths.new
-          ? parseInt(country.deaths.new).toLocaleString()
+          ? `+${parseInt(country.deaths.new).toLocaleString()}`
           : '',
         col5: country.cases.active.toLocaleString(),
         col6: country.cases.recovered.toLocaleString(),
