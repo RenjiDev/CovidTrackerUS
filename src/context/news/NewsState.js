@@ -23,6 +23,7 @@ const NewsState = (props) => {
 			const articles = await axios.get(
 				'https://cors-anywhere-covidtrackerus.herokuapp.com/https://www.google.com/search?q=covid+news&source=lnms&tbm=nws&sa=X&ved=2ahUKEwi00dyDiIPpAhXZXc0KHUXlAlQQ_AUoAXoECAwQAw&biw=1920&bih=898'
 			);
+			console.log(articles.data);
 			const $ = await cheerio.load(articles.data);
 			$('.nChh6e').each((i, el) => {
 				const artObj = {};
