@@ -18,22 +18,22 @@ const StateInfo = ({ setShowList }) => {
 		{
 			title: 'Positive Cases',
 			description: 'Cases are cumulative',
-			value: positive || 'Unknown',
+			value: positive?.toLocaleString() || 'Unknown',
 		},
 		{
 			title: 'Hospitalized',
 			description: '',
-			value: hospitalized || 'Unknown',
+			value: hospitalized?.toLocaleString() || 'Unknown',
 		},
 		{
 			title: 'Recovered',
 			description: '',
-			value: recovered || 'Unknown',
+			value: recovered?.toLocaleString() || 'Unknown',
 		},
 		{
 			title: 'Deaths',
 			description: '',
-			value: deaths || 'Unknown',
+			value: deaths?.toLocaleString() || 'Unknown',
 		},
 		{
 			title: 'Grade',
@@ -82,7 +82,7 @@ const StateInfo = ({ setShowList }) => {
 				))}
 			</div>
 
-			<p>{lastUpdated}</p>
+			<p>Last updated on {new Date(lastUpdated).toLocaleString()}</p>
 		</div>
 	);
 };

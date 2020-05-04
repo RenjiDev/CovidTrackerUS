@@ -6,7 +6,7 @@ const Article = ({ title, date, image, newsSource, link }) => {
 			<div className='article-info'>
 				<h1>{title}</h1>
 				<h2>
-					{date} • {newsSource || null}
+					{date} {newsSource ? `• ${newsSource}` : null}
 				</h2>
 			</div>
 		</a>
