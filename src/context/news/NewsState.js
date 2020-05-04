@@ -23,33 +23,64 @@ const NewsState = (props) => {
 			const articles = await axios.get(
 				'https://cors-anywhere-covidtrackerus.herokuapp.com/https://www.google.com/search?q=covid+news&source=lnms&tbm=nws&sa=X&ved=2ahUKEwi00dyDiIPpAhXZXc0KHUXlAlQQ_AUoAXoECAwQAw&biw=1920&bih=898'
 			);
-			console.log(articles.data);
 			const $ = await cheerio.load(articles.data);
-			$('.nChh6e').each((i, el) => {
-				const artObj = {};
-				artObj.id = i;
-				const link = $(el).find('a').attr('href');
-				artObj.link = link;
-				const headline = $(el).find('.phYMDf').text();
-				artObj.headline = headline;
-				console.log(headline);
-				const subTitle = $(el).find('.eYN3rb').text();
-				artObj.subTitle = subTitle;
-				const provider = $(el).find('.pDavDe').text();
-				artObj.provider = provider;
-				const providerLogo = $(el).find('.wQYexc').find('img').attr('src');
-				artObj.providerLogo = providerLogo;
-				const img = $(el).find('.KNcnob').find('g-img').find('img').attr('src');
-				artObj.img = img;
-				const date = $(el).find('.eNg7of').text();
-				artObj.date = date;
-				payload.push(artObj);
-			});
-			payload = payload.filter((p) => p.headline);
-			dispatch({
-				type: GET_NEWS,
-				payload,
-			});
+
+			const desktopCardClassName = $('.nChh6e').text();
+			if (desktopCardClassName === '') {
+				$('.CFbRHb').each((i, el) => {
+					const artObj = {};
+					artObj.id = i;
+					const link = $(el).find('a').attr('href');
+					artObj.link = link;
+					const headline = $(el).find('.ZUdMOb').text();
+					artObj.headline = headline;
+					// const subTitle = $(el).find('.eYN3rb').text();
+					// artObj.subTitle = subTitle;
+					const provider = $(el).find('.rISBZc').attr('alt');
+					artObj.provider = provider;
+					// const providerLogo = $(el).find('.rISBZc').attr('alt');
+					// artObj.providerLogo = providerLogo;
+					// const img = $(el).find('.KNcnob').find('g-img').find('img').attr('src');
+					// artObj.img = img;
+					const date = $(el).find('.pBrkfd').find('span').text();
+					artObj.date = date;
+					payload.push(artObj);
+				});
+				payload = payload.filter((p) => p.headline);
+				dispatch({
+					type: GET_NEWS,
+					payload,
+				});
+			} else {
+				$('.nChh6e').each((i, el) => {
+					const artObj = {};
+					artObj.id = i;
+					const link = $(el).find('a').attr('href');
+					artObj.link = link;
+					const headline = $(el).find('.phYMDf').text();
+					artObj.headline = headline;
+					const subTitle = $(el).find('.eYN3rb').text();
+					artObj.subTitle = subTitle;
+					const provider = $(el).find('.pDavDe').text();
+					artObj.provider = provider;
+					const providerLogo = $(el).find('.wQYexc').find('img').attr('src');
+					artObj.providerLogo = providerLogo;
+					const img = $(el)
+						.find('.KNcnob')
+						.find('g-img')
+						.find('img')
+						.attr('src');
+					artObj.img = img;
+					const date = $(el).find('.eNg7of').text();
+					artObj.date = date;
+					payload.push(artObj);
+				});
+				payload = payload.filter((p) => p.headline);
+				dispatch({
+					type: GET_NEWS,
+					payload,
+				});
+			}
 		} catch (err) {
 			dispatch({
 				type: NEWS_ERROR,
