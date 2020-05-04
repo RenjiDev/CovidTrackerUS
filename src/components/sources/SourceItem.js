@@ -2,7 +2,7 @@ import React from 'react';
 
 const SourceItem = ({ title, sourceTitle, url }) => {
 	return (
-		<a className='source-item' href={url}>
+		<a target='_blank' className='source-item' href={url}>
 			<div className='source-content-mobile'>
 				<span className='source-title'>
 					<h1>{title}</h1>

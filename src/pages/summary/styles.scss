@@ -34,6 +34,7 @@
 
 .summary-info-row {
 	display: flex;
+	justify-content: flex-end;
 	margin-bottom: 3rem;
 }
 
@@ -43,17 +44,18 @@
 	flex-direction: column;
 	align-items: flex-end;
 	margin-left: 3rem;
-	width: 12rem;
+	min-width: 12rem;
 }
 
 .summary-info-root > h1 {
 	font-size: 3rem;
+	font-family: OpenSans-SemiBold;
 }
 
 .summary-info-root > h2 {
 	font-size: 2rem;
 	color: #696969;
-	font-family: FiraGO-MediumItalic;
+	font-family: OpenSans-LightItalic;
 }
 
 .summary-last-updated {
@@ -70,11 +72,13 @@
 	font-size: 2rem;
 	margin-left: 0.5rem;
 	color: #696969;
+	font-family: FiraGO-Medium;
 }
 
 .summary-last-updated h2 {
 	font-size: 1.5rem;
 	font-family: OpenSans-LightItalic;
+	color: #9a9a9a;
 }
 
 @media (max-width: 1130px) {

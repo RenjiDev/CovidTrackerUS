@@ -2,10 +2,10 @@
 @import '../../styles/Units.scss';
 
 .heatmap-container {
-	max-height: 105vh;
 	width: 100%;
 	background-color: #1c1c1c;
 	display: flex;
+	min-height: 90rem;
 }
 
 .heatmap-search {
@@ -48,11 +48,15 @@
 	padding: 4rem 5rem 5rem 10rem;
 	box-sizing: border-box;
 	max-height: auto;
+}
+
+.heatmap-scroll-area {
 	overflow: scroll;
+	max-height: 42rem;
 	scrollbar-width: none; /* Firefox */
 }
 
-::-webkit-scrollbar {
+.heatmap-scroll-area::-webkit-scrollbar {
 	width: 0px;
 	background: transparent; /* make scrollbar transparent on Chrome & Safari*/
 }
@@ -121,6 +125,67 @@
 	margin-right: 10px;
 }
 
+.state-info-header {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.state-info-header > svg {
+	margin-right: auto;
+}
+.state-info-header > h1 {
+	margin-right: auto;
+	font-size: 2.5rem;
+	color: white;
+}
+
+.state-info-content {
+	margin-top: 5rem;
+}
+.state-item {
+	min-height: 8rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px white solid;
+	box-sizing: border-box;
+	padding: 2rem 0;
+}
+
+.state-item > h1 {
+	color: white;
+	font-size: 1.5rem;
+	font-family: OpenSans-Light;
+	margin-left: auto;
+}
+
+.state-item > span h1 {
+	font-size: 1.5rem;
+	font-family: OpenSans-Regular;
+	color: white;
+}
+
+.state-item > span p {
+	font-size: 1.5rem;
+	padding-right: 3rem;
+	font-family: OpenSans-Light;
+	color: rgb(143, 143, 143);
+}
+
+.state-info-container {
+	margin-top: 3rem;
+}
+
+// Last updated date
+.state-info-container > p {
+	font-size: 1.5rem;
+	margin-top: 3rem;
+	color: rgb(79, 79, 79);
+	font-family: OpenSans-Light;
+}
+
 @media (max-width: 1355px) {
 	// Title (Heatmap)
 	.heatmap-states-list-container > span > h1 {
@@ -135,7 +200,6 @@
 
 @media (max-width: 1116px) {
 	.heatmap-container {
-		height: 100vh;
 		width: 100%;
 		background-color: #1c1c1c;
 		display: flex;
@@ -150,8 +214,6 @@
 		padding: 0 10rem 5rem;
 		box-sizing: border-box;
 		max-height: auto;
-		overflow: scroll;
-		scrollbar-width: none; /* Firefox */
 	}
 
 	// DESKTOP
@@ -190,10 +252,7 @@
 		align-items: center;
 		justify-content: center;
 	}
-	.heatmap-container {
-		height: 150vh;
-		max-height: none;
-	}
+
 	.heatmap-map-container {
 		padding: 2rem 0;
 	}

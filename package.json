@@ -8,7 +8,11 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
+<<<<<<< HEAD
     "match-sorter": "^4.1.0",
+=======
+    "jump.js": "^1.0.2",
+>>>>>>> 99aee11ea5d9b2ef793a4e018d0a52c325ab56ce
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
