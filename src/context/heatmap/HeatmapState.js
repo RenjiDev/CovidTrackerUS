@@ -237,6 +237,10 @@ const HeatmapState = (props) => {
 
   // Filter through states
   const filterStates = (text) => {
+    const regex = new RegExp('/^[a-zA-Zs]*$/');
+    if (!text.match(regex)) {
+      text = ' ';
+    }
     dispatch({
       type: FILTER_STATE,
       payload: text,

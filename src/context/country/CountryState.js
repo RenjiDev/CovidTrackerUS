@@ -220,6 +220,10 @@ const CountryState = (props) => {
   };
 
   const filterCountries = (text) => {
+    const regex = new RegExp('/^[a-zA-Zs]*$/');
+    if (!text.match(regex)) {
+      text = ' ';
+    }
     dispatch({
       type: FILTER_COUNTRY,
       payload: text,
