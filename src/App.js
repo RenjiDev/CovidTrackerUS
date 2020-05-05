@@ -18,7 +18,7 @@ import Sources from './pages/sources/Sources';
 
 const indexContent = {
 	title: 'COVID-19 Tracker US',
-	description: 'Quickly track cases of COVID-19 in the United States.',
+	description: 'Quickly track cases of COVID-19 around the world.',
 	url: 'https://covidtrackerus.org/',
 	image: 'https://covidtrackerus.org/icon512.png',
 };

@@ -192,6 +192,7 @@ const CountryState = (props) => {
 						break;
 					case 'South-America':
 						c.country = 'South America';
+						break;
 					default:
 						break;
 				}

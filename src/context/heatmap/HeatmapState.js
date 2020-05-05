@@ -193,6 +193,8 @@ const HeatmapState = (props) => {
 					case 'WY':
 						s.state = 'Wyoming';
 						break;
+					default:
+						break;
 				}
 			});
 			states = states.filter(

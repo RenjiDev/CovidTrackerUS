@@ -34,6 +34,7 @@ const USMap = ({ setShowList }) => {
 
 	useEffect(() => {
 		getStateData();
+		//eslint-disable-next-line
 	}, []);
 
 	const gradeAColor = '#BE3E5A'; // #D83B65
@@ -196,6 +197,8 @@ const USMap = ({ setShowList }) => {
 				break;
 			case 'WY':
 				state = 'Wyoming';
+				break;
+			default:
 				break;
 		}
 		setCurrentState(state);

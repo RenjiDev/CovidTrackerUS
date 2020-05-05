@@ -180,7 +180,7 @@ const AllData = () => {
 					<div className='all-data-summary-buttons'>
 						<div>
 							{buttons_1.map((value) => (
-								<div onClick={() => onClick(value.title)}>
+								<div onClick={() => onClick(value.title)} key={Math.random()}>
 									<ChangeLocationButton
 										title={value.title}
 										iconActive={value.iconActive}
@@ -192,7 +192,7 @@ const AllData = () => {
 						</div>
 						<div>
 							{buttons_2.map((value) => (
-								<div onClick={() => onClick(value.title)}>
+								<div onClick={() => onClick(value.title)} key={Math.random()}>
 									<ChangeLocationButton
 										title={value.title}
 										iconActive={value.iconActive}

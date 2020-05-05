@@ -14,8 +14,6 @@ const News = () => {
 		//eslint-disable-next-line
 	}, []);
 
-	const dummy = [{}, {}, {}];
-
 	return loading ? null : (
 		<div className='news-root'>
 			<div className='news-content'>
@@ -47,7 +45,11 @@ const News = () => {
 			</div>
 
 			<Fade>
-				<img className='news-art' src={require('../../assets/news-art.svg')} />
+				<img
+					className='news-art'
+					src={require('../../assets/news-art.svg')}
+					alt='news-art'
+				/>
 			</Fade>
 		</div>
 	);

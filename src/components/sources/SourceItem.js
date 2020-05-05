@@ -2,7 +2,12 @@ import React from 'react';
 
 const SourceItem = ({ title, sourceTitle, url }) => {
 	return (
-		<a target='_blank' className='source-item hvr-icon-float' href={url}>
+		<a
+			target='_blank'
+			className='source-item hvr-icon-float'
+			href={url}
+			rel='noopener noreferrer'
+		>
 			<div className='source-content-mobile'>
 				<span className='source-title hvr-icon'>
 					<h1>{title}</h1>

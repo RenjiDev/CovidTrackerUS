@@ -82,6 +82,7 @@ const Summary = () => {
 				<img
 					className='summary-art'
 					src={require('../../assets/summary-art.svg')}
+					alt='summary-art'
 				/>
 			</Fade>
 		</div>

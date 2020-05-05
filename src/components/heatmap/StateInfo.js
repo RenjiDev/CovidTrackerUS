@@ -11,7 +11,6 @@ const StateInfo = ({ setShowList }) => {
 		deaths,
 		lastUpdated,
 		currentState,
-		clearCurrentState,
 	} = heatmapContext;
 
 	const data = [

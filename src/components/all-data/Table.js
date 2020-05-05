@@ -1,26 +1,28 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import CountryContext from '../../context/country/countryContext';
 
 const Table = () => {
 	const countryContext = useContext(CountryContext);
 	const { countries, filtered } = countryContext;
-	const [tableData, setTableData] = useState([]);
 
 	return (
 		<div className='table-container'>
 			<table>
 				<thead>
-					<th>Country</th>
-					<th>Confirmed</th>
-					<th>New Cases</th>
-					<th>New Deaths</th>
-					<th>Active</th>
-					<th>Recovered</th>
-					<th>Deaths</th>
+					<tr>
+						<th>Country</th>
+						<th>Confirmed</th>
+						<th>New Cases</th>
+						<th>New Deaths</th>
+						<th>Active</th>
+						<th>Recovered</th>
+						<th>Deaths</th>
+					</tr>
 				</thead>
 				<tbody>
 					{!filtered
-						? countries.map((value) => {
+						? // eslint-disable-next-line
+						  countries.map((value) => {
 								if (
 									value.country !== 'North America' &&
 									value.country !== 'South America' &&
@@ -31,7 +33,7 @@ const Table = () => {
 									value.country !== 'MS-Zaandam-'
 								) {
 									return (
-										<tr>
+										<tr key={Math.random()}>
 											<td>{value.country}</td>
 											<td>{value.cases.total.toLocaleString()}</td>
 											<td>
@@ -51,7 +53,8 @@ const Table = () => {
 									);
 								}
 						  })
-						: filtered.map((value) => {
+						: // eslint-disable-next-line
+						  filtered.map((value) => {
 								if (
 									value.country !== 'North America' &&
 									value.country !== 'South America' &&
@@ -62,7 +65,7 @@ const Table = () => {
 									value.country !== 'MS-Zaandam-'
 								) {
 									return (
-										<tr>
+										<tr key={Math.random()}>
 											<td>{value.country}</td>
 											<td>{value.cases.total.toLocaleString()}</td>
 											<td>

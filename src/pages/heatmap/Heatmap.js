@@ -9,13 +9,7 @@ import HeatmapContext from '../../context/heatmap/heatmapContext';
 const Heatmap = () => {
 	const heatmapContext = useContext(HeatmapContext);
 	const [showList, setShowList] = useState(false);
-	const {
-		getStateData,
-		loading,
-		states,
-		filtered,
-		currentState,
-	} = heatmapContext;
+	const { getStateData, loading, states, filtered } = heatmapContext;
 
 	useEffect(() => {
 		getStateData();
@@ -29,6 +23,7 @@ const Heatmap = () => {
 					<img
 						src={require('../../assets/fire.svg')}
 						className='heatmap-title-icon'
+						alt='Heatmap'
 					/>
 					<h1>Heatmap</h1>
 				</span>
@@ -47,6 +42,7 @@ const Heatmap = () => {
 							<img
 								src={require('../../assets/fire.svg')}
 								className='heatmap-title-icon'
+								alt='Heatmap'
 							/>
 							<h1>Heatmap</h1>
 						</span>
@@ -60,6 +56,7 @@ const Heatmap = () => {
 											name={state.state}
 											total={state.positive.toLocaleString()}
 											setShowList={setShowList}
+											key={Math.random()}
 										/>
 								  ))
 								: states.map((state) => (
@@ -67,6 +64,7 @@ const Heatmap = () => {
 											name={state.state}
 											total={state.positive.toLocaleString()}
 											setShowList={setShowList}
+											key={Math.random()}
 										/>
 								  ))}
 						</div>
