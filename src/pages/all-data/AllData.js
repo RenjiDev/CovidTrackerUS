@@ -228,10 +228,10 @@ const AllData = () => {
         <Table />
       </div>
 
-      {/* <div className='charts-container'>
-				<TotalCases />
-				<TotalDeaths />
-			</div> */}
+      <div className='charts-container'>
+        <TotalCases />
+        <TotalDeaths />
+      </div>
     </div>
   );
 };
