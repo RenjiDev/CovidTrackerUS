@@ -81,6 +81,16 @@
 
 .change-location-button:hover {
 	cursor: pointer;
+	background-color: #c70039;
+	border-color: black;
+}
+
+.change-location-button:hover > h1 {
+	color: black;
+}
+
+.change-location-button:hover > svg {
+	fill: black !important;
 }
 
 .active {

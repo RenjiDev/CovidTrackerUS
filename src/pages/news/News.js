@@ -3,6 +3,7 @@ import './styles.scss';
 
 import NewsContext from '../../context/news/newsContext';
 import Article from '../../components/news/Article';
+import { Fade } from 'react-reveal';
 
 const News = () => {
 	const newsContext = useContext(NewsContext);
@@ -45,7 +46,9 @@ const News = () => {
 				</div>
 			</div>
 
-			<img className='news-art' src={require('../../assets/news-art.svg')} />
+			<Fade>
+				<img className='news-art' src={require('../../assets/news-art.svg')} />
+			</Fade>
 		</div>
 	);
 };

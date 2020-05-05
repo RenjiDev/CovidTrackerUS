@@ -2,26 +2,26 @@ import React from 'react';
 
 const SourceItem = ({ title, sourceTitle, url }) => {
 	return (
-		<a target='_blank' className='source-item' href={url}>
+		<a target='_blank' className='source-item hvr-icon-float' href={url}>
 			<div className='source-content-mobile'>
-				<span className='source-title'>
+				<span className='source-title hvr-icon'>
 					<h1>{title}</h1>
 				</span>
-				<span className='source-location-title'>
+				<span className='source-location-title hvr-icon'>
 					<h2>{sourceTitle}</h2>
 				</span>
 			</div>
 
 			<div className='source-content-desktop'>
-				<span className='source-title'>
+				<span className='source-title hvr-icon'>
 					<h1>{title}</h1>
 				</span>
-				<span className='source-location-title'>
+				<span className='source-location-title hvr-icon'>
 					<h2>{sourceTitle}</h2>
 				</span>
 			</div>
 
-			<span className='source-link-icon'>
+			<span className='source-link-icon hvr-icon'>
 				<svg
 					width='24'
 					height='24'

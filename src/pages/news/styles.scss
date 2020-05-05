@@ -60,6 +60,11 @@
 	justify-content: center;
 }
 
+.article-info:hover > h1,
+.article-info:hover > h2 {
+	color: white;
+}
+
 .article-info > h1 {
 	color: #a8a8a8;
 	font-family: OpenSans-SemiBold;

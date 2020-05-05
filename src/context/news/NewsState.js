@@ -8,13 +8,13 @@ import axios from 'axios';
 import cheerio from 'cheerio';
 
 const NewsState = (props) => {
-  const initialState = {
-    loading: true,
-    news: [],
-    error: null,
-  };
+	const initialState = {
+		loading: true,
+		news: [],
+		error: null,
+	};
 
-  const [state, dispatch] = useReducer(NewsReducer, initialState);
+	const [state, dispatch] = useReducer(NewsReducer, initialState);
 
 	// Get news articles
 	const getNews = async () => {
@@ -24,7 +24,6 @@ const NewsState = (props) => {
 				'https://cors-anywhere-covidtrackerus.herokuapp.com/https://www.google.com/search?q=covid+news&source=lnms&tbm=nws&sa=X&ved=2ahUKEwi00dyDiIPpAhXZXc0KHUXlAlQQ_AUoAXoECAwQAw&biw=1920&bih=898'
 			);
 			const $ = await cheerio.load(articles.data);
-
 			const desktopCardClassName = $('.nChh6e').text();
 			if (desktopCardClassName === '') {
 				$('.CFbRHb').each((i, el) => {
@@ -89,17 +88,17 @@ const NewsState = (props) => {
 		}
 	};
 
-  return (
-    <NewsContext.Provider
-      value={{
-        news: state.news,
-        loading: state.loading,
-        getNews,
-      }}
-    >
-      {props.children}
-    </NewsContext.Provider>
-  );
+	return (
+		<NewsContext.Provider
+			value={{
+				news: state.news,
+				loading: state.loading,
+				getNews,
+			}}
+		>
+			{props.children}
+		</NewsContext.Provider>
+	);
 };
 
 export default NewsState;

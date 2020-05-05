@@ -125,6 +125,11 @@
 	margin-right: 10px;
 }
 
+.heatmap-list-item svg:hover {
+	cursor: pointer;
+	fill: white;
+}
+
 .state-info-header {
 	display: flex;
 	width: 100%;
@@ -135,6 +140,11 @@
 .state-info-header > svg {
 	margin-right: auto;
 }
+.state-info-header > svg:hover {
+	cursor: pointer;
+	fill: white;
+}
+
 .state-info-header > h1 {
 	margin-right: auto;
 	font-size: 2.5rem;
@@ -184,6 +194,10 @@
 	margin-top: 3rem;
 	color: rgb(79, 79, 79);
 	font-family: OpenSans-Light;
+}
+
+.geo-state:hover {
+	cursor: pointer;
 }
 
 @media (max-width: 1355px) {
