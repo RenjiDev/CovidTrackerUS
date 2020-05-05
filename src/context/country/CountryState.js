@@ -220,7 +220,7 @@ const CountryState = (props) => {
   };
 
   const filterCountries = (text) => {
-    const regex = new RegExp('/^[a-zA-Zs]*$/');
+    const regex = new RegExp('^[a-zA-Z]+(s[a-zA-Z]+)?$');
     if (!text.match(regex)) {
       text = ' ';
     }
