@@ -2,112 +2,125 @@
 @import '../../styles/Units.scss';
 
 .ldg-root-container {
-	display: flex;
-	height: auto;
+  display: flex;
+  height: auto;
 }
 
 // Landing Page Content
 .ldg-col-1 {
-	width: 100%;
-	background: #f7f7f7;
-	box-sizing: border-box;
-	padding: 3rem;
+  width: 100%;
+  background: #f7f7f7;
+  box-sizing: border-box;
+  padding: 3rem;
 }
 
 // Aesthetic Image
 .ldg-col-2 {
-	display: none;
-	background-image: url('../../assets/landing-stock.jpg');
-	background-size: cover;
-	background-position-x: right;
+  display: none;
+  background-image: url('../../assets/landing-stock.jpg');
+  background-size: cover;
+  background-position-x: right;
 }
 
 // COVID TRACKER Title
 .ldg-header-container h1 {
-	font-size: $h1_mobile;
-	font-family: 'FiraGO-ExtraBold';
-	background-color: $red;
-	padding: 1rem;
+  font-size: $h1_mobile;
+  font-family: 'FiraGO-ExtraBold';
+  background-color: $red;
+  padding: 1rem;
 }
 
 // Description under title
 .ldg-header-container h2 {
-	font-size: $h2_mobile;
-	font-family: 'FiraGO-Bold';
-	padding: 3rem 0 5rem;
+  font-size: $h2_mobile;
+  font-family: 'FiraGO-Bold';
+  padding: 3rem 0 5rem;
 }
 
 // The red nav buttons
 .ldg-nav-item {
-	height: 3rem;
-	border-radius: 10rem;
-	border: 1px $red solid;
-	display: flex;
-	align-items: center;
-	padding: 0.5rem 1rem;
-	margin-bottom: 1.5rem;
+  height: 3rem;
+  border-radius: 10rem;
+  border: 1px $red solid;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ldg-nav-item:hover {
+  cursor: pointer;
+  background-color: $red;
+  border: 1px black solid;
 }
 
 // The red button titles
 .ldg-nav-item h1 {
-	font-size: $nav_title_mobile;
-	font-family: 'FiraGO-BoldItalic';
-	color: $red;
-	margin-left: 1rem;
+  font-size: $nav_title_mobile;
+  font-family: 'FiraGO-BoldItalic';
+  color: $red;
+  margin-left: 1rem;
+}
+.ldg-nav-item:hover > h1 {
+  color: black;
+}
+
+.ldg-nav-item:hover > svg {
+  fill: black !important;
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-	.ldg-nav-item {
-		margin: 0.5rem;
-		min-width: 12rem;
-		max-width: 23rem;
-	}
+  .ldg-nav-item {
+    margin: 0.5rem;
+    min-width: 12rem;
+    max-width: 23rem;
+  }
 
-	// Twitter and Coffee Buttons
-	.ldg-nav-extra-items-container {
-		display: flex;
-		margin-top: 2rem;
-	}
+  // Twitter and Coffee Buttons
+  .ldg-nav-extra-items-container {
+    display: flex;
+    margin-top: 2rem;
+  }
 
-	// The red nav buttons
-	.ldg-nav-items-container {
-		display: flex;
-	}
+  // The red nav buttons
+  .ldg-nav-items-container {
+    display: flex;
+  }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-	// Description under title
-	.ldg-header-container h2 {
-		font-size: $h2_desktop;
-		font-family: 'FiraGO-Bold';
-		padding-bottom: 10rem;
-	}
+  // Description under title
+  .ldg-header-container h2 {
+    font-size: $h2_desktop;
+    font-family: 'FiraGO-Bold';
+    padding-bottom: 10rem;
+  }
 
-	// Content
-	.ldg-col-1 {
-		width: 70%;
-		padding: 15vh 7rem 15vh $page_margin_left;
-	}
+  // Content
+  .ldg-col-1 {
+    width: 70%;
+    padding: 15vh 7rem 15vh $page_margin_left;
+  }
 
-	// Image
-	.ldg-col-2 {
-		width: 30%;
-		display: block;
-	}
+  // Image
+  .ldg-col-2 {
+    width: 30%;
+    display: block;
+  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-	// The red nav buttons
-	.ldg-nav-item {
-		max-width: 26rem;
-		height: 3.5rem;
-	}
+  // The red nav buttons
+  .ldg-nav-item {
+    max-width: 26rem;
+    height: 3.5rem;
+  }
 
-	// The red button titles
-	.ldg-nav-item h1 {
-		font-size: $nav_title_desktop;
-	}
+  // The red button titles
+  .ldg-nav-item h1 {
+    font-size: $nav_title_desktop;
+  }
 }

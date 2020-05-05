@@ -204,7 +204,7 @@ const AllData = () => {
 						</div>
 					</div>
 				</div>
-				<p>{new Date(timeUpdated).toLocaleString()}</p>
+				<p>As of {new Date(timeUpdated).toLocaleString()}</p>
 			</div>
 
 			<div className='table-root-with-input'>
