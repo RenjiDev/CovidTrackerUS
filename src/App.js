@@ -15,6 +15,7 @@ import Heatmap from './pages/heatmap/Heatmap';
 import News from './pages/news/News';
 import AllData from './pages/all-data/AllData';
 import Sources from './pages/sources/Sources';
+import JumpToTopButton from './components/JumpToTopButton';
 
 const indexContent = {
 	title: 'COVID-19 Tracker US',
@@ -52,6 +53,7 @@ const App = () => {
 			<NewsState>
 				<HeatmapState>
 					<Fragment>
+						<JumpToTopButton />
 						<Landing />
 						<Summary />
 						<Heatmap />

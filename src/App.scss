@@ -134,3 +134,87 @@ h2 {
 	-webkit-transform: translateY(-4px);
 	transform: translateY(-4px);
 }
+
+// Jump to top button
+.jtt-container {
+	height: 7rem;
+	width: 7rem;
+	position: fixed;
+	background-color: #c70039;
+	z-index: 10;
+	bottom: 0;
+	right: 0;
+	margin: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 3.5rem;
+	box-shadow: 0px 5px 10px #1f1f1f76;
+}
+
+.jtt-container:hover {
+	cursor: pointer;
+}
+
+@media (max-width: 425px) {
+	.jtt-container {
+		height: 5rem;
+		width: 5rem;
+	}
+	.jtt-container > svg {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.fade-in {
+	animation: fadeIn ease 1s;
+	-webkit-animation: fadeIn ease 1s;
+	-moz-animation: fadeIn ease 1s;
+	-o-animation: fadeIn ease 1s;
+	-ms-animation: fadeIn ease 1s;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
