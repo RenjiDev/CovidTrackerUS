@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import CountryContext from '../../context/country/countryContext';
 
 const Table = () => {
@@ -48,7 +48,7 @@ const Table = () => {
 											</td>
 											<td>{value.cases.active.toLocaleString()}</td>
 											<td>{value.cases.recovered.toLocaleString()}</td>
-											<td>{value.cases.total.toLocaleString()}</td>
+											<td>{value.deaths.total.toLocaleString()}</td>
 										</tr>
 									);
 								}
@@ -80,7 +80,7 @@ const Table = () => {
 											</td>
 											<td>{value.cases.active.toLocaleString()}</td>
 											<td>{value.cases.recovered.toLocaleString()}</td>
-											<td>{value.cases.total.toLocaleString()}</td>
+											<td>{value.deaths.total.toLocaleString()}</td>
 										</tr>
 									);
 								}
