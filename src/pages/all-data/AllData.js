@@ -49,24 +49,28 @@ const AllData = () => {
         </svg>
       ),
       title: 'Global',
+      name: 'Global',
       active: true,
     },
     {
       iconActive: null,
       iconInactive: null,
       title: 'North America',
+      name: 'North America',
       active: false,
     },
     {
       iconActive: null,
       iconInactive: null,
       title: 'South America',
+      name: 'South America',
       active: false,
     },
     {
       iconActive: null,
       iconInactive: null,
       title: 'Asia',
+      name: 'Asia',
       active: false,
     },
   ]);
@@ -76,18 +80,28 @@ const AllData = () => {
       iconActive: null,
       iconInactive: null,
       title: 'Europe',
+      name: 'Europe',
       active: false,
     },
     {
       iconActive: null,
       iconInactive: null,
       title: 'Africa',
+      name: 'Africa',
       active: false,
     },
     {
       iconActive: null,
       iconInactive: null,
       title: 'Oceania',
+      name: 'Oceania',
+      active: false,
+    },
+    {
+      iconActive: null,
+      iconInactive: null,
+      title: 'United States of America',
+      name: 'USA',
       active: false,
     },
   ]);
@@ -182,7 +196,7 @@ const AllData = () => {
               {buttons_1.map((value) => (
                 <div onClick={() => onClick(value.title)} key={Math.random()}>
                   <ChangeLocationButton
-                    title={value.title}
+                    title={value.name}
                     iconActive={value.iconActive}
                     iconInactive={value.iconInactive}
                     active={value.active}
@@ -194,7 +208,7 @@ const AllData = () => {
               {buttons_2.map((value) => (
                 <div onClick={() => onClick(value.title)} key={Math.random()}>
                   <ChangeLocationButton
-                    title={value.title}
+                    title={value.name}
                     iconActive={value.iconActive}
                     iconInactive={value.iconInactive}
                     active={value.active}
