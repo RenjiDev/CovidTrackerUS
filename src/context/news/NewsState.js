@@ -19,7 +19,7 @@ const NewsState = (props) => {
   const getNews = async () => {
     try {
       const articles = await axios.get(
-        'https://cors-anywhere-covidtrackerus.herokuapp.com/https://covidtrackerus-backend.herokuapp.com/api/news'
+        'https://covidtrackerus-backend.herokuapp.com/api/news'
       );
       dispatch({
         type: GET_NEWS,
