@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
-import CountryContext from '../../context/country/countryContext';
+import React, { useContext } from "react";
+import CountryContext from "../../context/country/countryContext";
 
 const Table = () => {
   const countryContext = useContext(CountryContext);
   const { countries, filtered } = countryContext;
 
   return (
-    <div className='table-container'>
+    <div className="table-container">
       <table>
         <thead>
           <tr>
@@ -24,13 +24,13 @@ const Table = () => {
             ? // eslint-disable-next-line
               countries.map((value) => {
                 if (
-                  value.country !== 'North America' &&
-                  value.country !== 'South America' &&
-                  value.country !== 'Europe' &&
-                  value.country !== 'Asia' &&
-                  value.country !== 'Africa' &&
-                  value.country !== 'Diamond-Princess-' &&
-                  value.country !== 'MS-Zaandam-'
+                  value.country !== "North America" &&
+                  value.country !== "South America" &&
+                  value.country !== "Europe" &&
+                  value.country !== "Asia" &&
+                  value.country !== "Africa" &&
+                  value.country !== "Diamond-Princess-" &&
+                  value.country !== "MS-Zaandam-"
                 ) {
                   return (
                     <tr key={Math.random()}>
@@ -39,16 +39,16 @@ const Table = () => {
                       <td>
                         {value.cases.new
                           ? `+${parseInt(value.cases.new).toLocaleString()}`
-                          : ''}
+                          : ""}
                       </td>
                       <td>
                         {value.deaths.new
                           ? `+${parseInt(value.deaths.new).toLocaleString()}`
-                          : ''}
+                          : ""}
                       </td>
-                      <td>{value.cases.active.toLocaleString()}</td>
-                      <td>{value.cases.recovered.toLocaleString()}</td>
-                      <td>{value.deaths.total.toLocaleString()}</td>
+                      <td>{value.cases?.active?.toLocaleString()}</td>
+                      <td>{value.cases?.recovered?.toLocaleString()}</td>
+                      <td>{value.deaths?.total?.toLocaleString()}</td>
                     </tr>
                   );
                 }
@@ -56,13 +56,13 @@ const Table = () => {
             : // eslint-disable-next-line
               filtered.map((value) => {
                 if (
-                  value.country !== 'North America' &&
-                  value.country !== 'South America' &&
-                  value.country !== 'Europe' &&
-                  value.country !== 'Asia' &&
-                  value.country !== 'Africa' &&
-                  value.country !== 'Diamond-Princess-' &&
-                  value.country !== 'MS-Zaandam-'
+                  value.country !== "North America" &&
+                  value.country !== "South America" &&
+                  value.country !== "Europe" &&
+                  value.country !== "Asia" &&
+                  value.country !== "Africa" &&
+                  value.country !== "Diamond-Princess-" &&
+                  value.country !== "MS-Zaandam-"
                 ) {
                   return (
                     <tr key={Math.random()}>
@@ -71,16 +71,16 @@ const Table = () => {
                       <td>
                         {value.cases.new
                           ? `+${parseInt(value.cases.new).toLocaleString()}`
-                          : ''}
+                          : ""}
                       </td>
                       <td>
                         {value.deaths.new
                           ? `+${parseInt(value.deaths.new).toLocaleString()}`
-                          : ''}
+                          : ""}
                       </td>
-                      <td>{value.cases.active.toLocaleString()}</td>
-                      <td>{value.cases.recovered.toLocaleString()}</td>
-                      <td>{value.deaths.total.toLocaleString()}</td>
+                      <td>{value.cases?.active?.toLocaleString()}</td>
+                      <td>{value.cases?.recovered?.toLocaleString()}</td>
+                      <td>{value.deaths?.total?.toLocaleString()}</td>
                     </tr>
                   );
                 }
